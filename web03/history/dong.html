@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>마포 역사</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <style>
+/*header*/
+  
+.table { min-width:960px; padding-left: 450px;}
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro03/data/green.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+.content { clear:both; width: 100%;}
+.page { clear:both; width: 100%;}
+
+.title {text-align: center;}
+.buttons {padding-left: 650px;}
+
+        /*footer*/
+    
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    </style>
+    
+  </head>
+
+  <body>
+  
+
+ 
+    <div id="nav-group">
+      <div class="container"> 
+          <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+            <div class="navbar-brand">
+              <a href="../index.html" class="logo"><img src="../img/green.jpg" width="110" alt="로고"></a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start" id="gnb">
+                  <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                  
+  
+                     <div href="./notice.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광안내
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../notice/notice.html">
+                                 공지사항
+                           </a>
+                         <a class="navbar-item" href="../notice/video.html">
+                          마포관광동영상
+                        </a>
+                      </div> 
+                  </div>     
+                  
+                  <div href="./tour.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광명소
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../tour/nature.html">
+                                 자연속힐링
+                           </a>
+                         <a class="navbar-item" href="../tour/exhibit.html">
+                          체험관/전시장
+                        </a>
+                        <a class="navbar-item" href="../tour/concert.html">
+                          공연장
+                        </a>
+                      </div> 
+                  </div>
+                  
+                  <div href="./shopping.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            쇼핑
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../shopping/mall.html">
+                                 쇼핑몰
+                           </a>
+                         <a class="navbar-item" href="../shopping/market.html">
+                              전통시장
+                        </a>
+                      </div> 
+                  </div>
+
+                  
+                  <div href="./food.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            음식
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../food/mobeom.html">
+                                 모범음식점
+                           </a>
+                         <a class="navbar-item" href="../food/gwan.html">
+                         관광식당
+                        </a>
+                        <a class="navbar-item" href="../food/ansim.html">
+                         안심식당
+                        </a>
+                      </div> 
+                  </div>
+                      <div class="navbar-dropdown cate" id="cate04"></div>
+                  
+                  <div href="./history.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            역사
+                      </a>
+                      <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../history/mapo.html">
+                          마포의 역사
+                        </a>
+                        <a class="navbar-item" href="../history/dong.html">
+                          동이름의 유래
+                        </a>
+                      </div> 
+                  </div>
+                  <div class="navbar-dropdown cate" id="cate05"></div>
+                      
+              </div>
+              
+              <div class="navbar-end" id="tnb">
+                <div class="navbar-item">
+                    
+              
+               <div class="buttons">
+                 <a href="../member/join.html" class="button is-success">
+                   회원가입
+                 </a>
+                 <a href="../member/login.html" class="button is-success">
+                   로그인
+                 </a>
+                   
+               </div>
+              
+            </div>
+          </div>
+            </div>
+          </nav>
+      <script>
+      $(document).ready(function(){
+          $.ajax({
+              url:"/web03/MenuLoadCtrl.html",
+              type:"POST",
+              enctype:"UTF-8",
+              datatype:"json",
+              processData:false,
+              contentType:false, 
+              cache:false,
+              success:function(data){
+                  $(".navbar-dropdown.cate").empty();
+                  var trans = $.parseJSON(data);
+                  $.each(trans, function(key, value){
+                      if(key=="data"){
+                          for(var i=0;i<value.length;i++){
+                              if(value[i].cate=="A"){
+                                  $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="B"){
+                                  $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="C"){
+                                  $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="D"){
+                                  $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="E"){
+                                  $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="F"){
+                                  $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="G"){
+                                  $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              }
+                          }
+                      }
+                  });
+                  
+              }
+          });
+      });
+      </script>
+      </div>
+  </div>
+      <section class="section">
+        <div class="container"><br><br>
+          <h1 class="title">동이름의 유래</h1><br><br>
+        <table class="table">
+          <thead>
+          </thead>
+           <tbody>
+           
+            <tr>
+             
+                <article class="message is-success">
+                    <div class="message-header">
+                      <p>공덕동</p>
+                      <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        공덕이라는 지명의 유래는 확실치 않으나, 높은 고원의 평평한 곳을 뜻하는 우리 말의 ‘더기’ 또는 ‘덕’, 언덕 을 일컫는 ‘큰 더기’에서 유래했을 것이라는 설과 옛 지명인 공덕리(孔德里)에서 유래됐다는 설이 있다.
+                    </div>
+                  </article><br><br>
+
+                  <article class="message is-success">
+                    <div class="message-header">
+                      <p>신공덕동</p>
+                      <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        조선시대부터 있던 공덕리와 공덕동 인근에 생긴 신동을 합하여 신공덕동이란 이름이 탄생했다. 예전엔 주로 농작물을 키우던 밭이었는데 1895년 을미사변 무렵부터 사람이 거주했다고 한다. 일본 군인이 횡행 하는 도성 안의 어수선한 분위기가 싫어 판서벼슬을 지낸 김대감이 일가식솔을 이끌고 낙향하여 농부가 되려는 생각으로 마포나루까지 갔다가 되돌아와서 정착한 곳이 이 일대라고 한다.</div>
+                  </article><br><br>
+
+                  <article class="message is-success">
+                    <div class="message-header">
+                      <p>	
+                        도화동</p>
+                      <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        복숭아꽃이 많이 피어 조선시대부터 복사골 혹은 도화내동이라 불렀다. 지금의 삼성아파트와 우성아파트 일대를 말한다. 1905년 경원선을 기점으로 주거지가 생기면서, 지금은 흔적을 찾기 어렵다.</div>
+                  </article><br><br>
+
+                  <article class="message is-success">
+                    <div class="message-header">
+                      <p>	
+                        마포동</p>
+                      <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        이곳에 마포나루가 있었다고 하여 그 명칭이 유래되었다. 한강변 해상 운송처였던 5개 곳(뚝섬, 노량, 용산, 마포, 양화진) 중에서도 특히 붐볐던 곳으로 일명 ‘삼개’에서 삼→마(麻), 개→포(浦)로 의역되어 ‘마포’가 되었다.</div>
+                  </article><br><br>
+
+                  <article class="message is-success">
+                    <div class="message-header">
+                      <p>	
+                        토정동</p>
+                      <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        이지함이 살던 곳으로 그의 호가 동 이름이 되었다. 해방 직후까지도 토정 이지함의 옛 집터로 전해지는 빈터가 남아 있었다고 하는데, 지금은 그 자리에 영모비만 세워져 있다. 토정동의 옛고을 이름에 아랫토정, 윗토정이 있는 것으로 보아 이 지역이 예전부터 토정리로 불리었던 곳임을 알 수 있다.</div>
+                  </article><br><br>
+
+
+            </tr>
+            
+    
+          </tbody>
+        </table>
+        <div class="buttons">
+          <a href="/web03/notice/addDong.html" class="button is-success">글 등록</a>
+        </div>
+        </div>
+      </section>
+      
+        
+        <style>
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+        </style>
+        
+    <footer class="footer">
+      <div class="content has-text-centered">
+      
+        <p> 
+    
+          <a href="https://jgthms.com">개인정보처리방침 |</a>
+          <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
+          <a href="https://jgthms.com">홈페이지 개선의견</a><br><br>
+          03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
+           야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9
+        </p>
+      </div>
+    </footer>
+      
+    </body>
+
+    </html>

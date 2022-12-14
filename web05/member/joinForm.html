@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOW CLASSIC</title>
+   <!-- 메타포 -->
+   <meta name="description" content="서울의 모던과 유니크함을 담은 디자이너 브랜드 로우클래식 온라인 스토어입니다.">
+   <meta name="keywords" content="LOW CLASSIC, 로우클래식, 로클, 이명신, 디자이너 브랜드">
+   <!-- 오픈그래프 -->
+   <meta property="og:site_name" content="LOW CLASSIC">
+   <meta property="og:title" content="LOW CLASSIC">
+   <meta property="og:url" content="http://lowclassic.com">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="서울의 모던과 유니크함을 담은 디자이너 브랜드 로우클래식 온라인 스토어입니다.">
+   <meta property="og:image" content="./img/logo/logo.svg"> 
+   <meta property="og:image:width" content="800">
+   <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <style>
+    /* header.css */
+
+    ::selection {
+		background-color: rgb(103, 83, 50);
+		color: rgb(255, 255, 255); }
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+    a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    .logo {width: 200px; padding-top: 17px; padding-left: 40px;}
+    .buttons {padding-left: 650px;}
+    .navbar {padding-top: 25px;}
+
+    .ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
+.ft_wrap:after { content:""; display:block; clear:both; }
+.ft_logo { float:left; width: 150px; }
+.left { float:left; width: 460px; padding-left: 50px; }
+.right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.fnb { clear:both; }
+.fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
+.fnb a.dpc { color:rgb(0, 0, 0); }
+.addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
+font-size:12px; line-height: 2; }
+.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px;}
+.sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
+height: 40px; line-height: 44px; text-align:center; width: 140px; }
+#sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
+#sel option { color:rgb(0, 0, 0); }
+
+.to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+background-color:rgba(0, 0, 0, 0.268); color:#fff; display:block; width: 60px;
+height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+.to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
+.to_top.on { visibility: visible; }
+
+
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 1em; text-align: center; }
+    .home { color:#333; }
+
+    .frm { border:2px solid #333; padding: 24px; width: 580px; margin:50px auto; }
+    .frm_tb { display:table; margin:40px auto;  }
+    .frm_tb tr { display:table-row; }
+    .frm_tb td, .frm_tb th { display:table-cell; }
+    .frm_tb th { width:200px; height: 48px;  }
+    .frm_tb td { width:300px; height: 48px; }
+
+    .in_dt { background-color:#fff; height:30px; line-height: 32px; width: 180px; 
+    color:rgb(0, 0, 0); font-size:14px; text-indent:0.5em; }
+    .in_btn { display:block; color: rgb(255, 255, 255); background-color:rgb(0, 0, 0); min-width:120px; height: 32px; 
+    line-height: 32px; border-radius:0; border-color:transparent; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
+    .in_btn:hover { background-color: greenyellow; color:rgb(0, 0, 0); }
+
+    .frm_tb { display:table; }
+    .frm_tb li { display:table-row; }
+    .frm_tb .td, .frm_tb .th, .frm_tb .td2 { display:table-cell; }
+    .frm_tb .th { width:200px; }
+    .frm_tb .td { width:200px; }
+    .frm_tb .td2 { width:400px; }
+    </style>
+    <link rel="stylesheet" href="./css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div id="nav-group">
+            <div class="container"> 
+                <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+                  <div class="navbar-brand">
+                    <a href="../main.html" class="logo"><img src="../img/logo/logo.svg" width="200" alt="로고"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                    </a>
+                  </div>
+                
+                  <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start" id="gnb">
+                        <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                        
+        
+                           <div href="./new.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  new
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../new/22fw.html">
+                                   22 f/w
+                                </a>
+                              <a class="navbar-item" href="../new/rusuho.html">
+                                rusuho
+                             </a>
+                             </div>
+                        </div>     
+                        
+                        <div href="./top.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  top
+                            </a>
+                            <div class="navbar-dropdown single">
+                                 <a class="navbar-item" href="../top/jackets.html">
+                                    jackets
+                                 </a>
+                               <a class="navbar-item" href="../top/knit.html">
+                                knit
+                              </a>
+                            </div> 
+                        </div>
+                        
+                        <div href="./bottom.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  bottom
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../bottom/pants.html">
+                                   pants
+                                </a>
+                              <a class="navbar-item" href="../bottom/denim.html">
+                               denim
+                             </a>
+                            </div>
+                        </div>
+    
+                        
+                        <div href="./about.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                about
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../about/lowclassic.html">
+                                 low classic
+                               </a>
+                               <a class="navbar-item" href="../about/contact.html">
+                                 contact
+                               </a>
+                            </div>
+                        </div>
+                            <div class="navbar-dropdown cate" id="cate04"></div>
+                        
+                        <div href="./lowclassic.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                low classic
+                            </a>
+                            <div class="navbar-dropdown single">
+                               <a class="navbar-item" href="../lowclassic/collection.html">
+                                collection
+                              </a>
+                              <a class="navbar-item" href="../lowclassic/lookbook.html">
+                                lookbook
+                              </a>
+                            </div> 
+                        </div>
+                        <div class="navbar-dropdown cate" id="cate05"></div>
+                            
+                    </div>
+                    
+                    <div class="navbar-end" id="tnb">
+                      <div class="navbar-item">
+                          
+                    
+                     <div class="buttons">
+                       <a href="../member/join.html" class="button is-white is-small  is-rounded">
+                         JOIN
+                       </a>
+                       <a href="../member/login.html" class="button is-white is-small  is-rounded">
+                         LOGIN
+                       </a>
+                         
+                     </div>
+                    
+                  </div>
+                </div>
+                  </div>
+                </nav>
+            <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url:"/web03/MenuLoadCtrl.html",
+                    type:"POST",
+                    enctype:"UTF-8",
+                    datatype:"json",
+                    processData:false,
+                    contentType:false, 
+                    cache:false,
+                    success:function(data){
+                        $(".navbar-dropdown.cate").empty();
+                        var trans = $.parseJSON(data);
+                        $.each(trans, function(key, value){
+                            if(key=="data"){
+                                for(var i=0;i<value.length;i++){
+                                    if(value[i].cate=="A"){
+                                        $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="B"){
+                                        $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="C"){
+                                        $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="D"){
+                                        $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="E"){
+                                        $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="F"){
+                                        $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="G"){
+                                        $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    }
+                                }
+                            }
+                        });
+                        
+                    }
+                });
+            });
+            </script>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">회원가입</h2>
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="joinForm" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td>
+                                        <input type="text" id="id" name="id" class="in_dt" required autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="id">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" id="pw" name="pw" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="name">이  름</label></th>
+                                    <td>
+                                        <input type="text" id="name" name="name" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="email">이메일</label></th>
+                                    <td>
+                                        <input type="email" id="email" name="email" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="submit" class="in_btn">회원가입</button>
+                                        <button type="reset" class="in_btn">취소</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="ft2">
+        <div class="ft_wrap">
+            <div class="left">
+               <p class="copyright"><br></p>
+                <p class="addr">
+                   LOW CLASSIC | REPRESENTATIVE 이명신<br>
+                   BUSINESS NUMBER L. 847-87-01336<br>
+                   ONLINE BUSINESS L. 2019-서울강남-03844
+                </p>
+                <p class="copyright">© LOW CLASSIC.</p>
+            </div>
+            <div class="right1">
+               <p class="copyright"></p>
+               <p class="addr">
+                   2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+                   T. 070-7534-5004&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INFO@LOWCLASSIC.COM  
+               </p>
+           </div>
+   
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+   </div>
+   </body>
+   </html>

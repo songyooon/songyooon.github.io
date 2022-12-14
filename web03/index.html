@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>마포 문화관광</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="./rollingbanner-js.css">
+<style>
+
+  /*header*/
+  
+.table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro03/data/green.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+
+
+
+.content { clear:both; width: 100%;}
+    .vs { clear:both; width: 100%; height:100vh; overflow:hidden;}
+    .page { clear:both; width: 100%;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    .page_tit { text-align: left; font-size:45px; padding-left: 330px; padding-top: 1.2em; padding-bottom: 0.8em;  font-weight: 750; }
+    .lst { clear:both; width: 1200px;}
+    .lst:after { content:""; display:block; clear:both; }
+    .lst li { margin-bottom: 40px;}
+    .lst li.left { float:left; width: 816px; height: 459px;}
+    .lst li.right { float:right; width: 350px; height: 459px;}
+    .cate_tit { color: #000; font-size: 20px; padding-bottom: 0.5em;}
+    .cate_com { color:#000; font-size: 14px;}
+
+    .d-flex {margin-left:880px; }
+
+    .main_review_tit {text-align: left; padding-left: 330px; }
+    .main_review_tit2 {text-align: left; padding-left: 330px; color:rgb(175, 175, 175) }
+
+    .pro_lst { clear:both; width: 100%; padding-left: 80px; }
+    .pro_lst li { width: 21%; float:left; margin-right: 5%; margin-bottom: 140px;
+    position:relative; }
+    .pro_lst li a { display:block; position:relative; }
+    .pro_lst li a:hover {background-color: rgba(0, 0, 0, 0.089); opacity: 0.99; transition-duration:0.65s;}
+    .pro_lst li a .pro_fr { width: 100%; height:auto; overflow:hidden; background-color:transparent;  }
+    .pro_lst li a img { display:block; width: 250px; height:auto; }
+    .pro_lst li:nth-child(4n) { margin-right: 0; }
+    .pro_tit { line-height:3; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222; text-align: center;}
+    .pro_com, .pro_info { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:rgb(73, 73, 73);  text-align: left;}
+    .sale_price { font-size:16px; font-weight: bold; }
+    .origin_price { text-decoration: line-through; color:rgb(160, 160, 160); }
+    .pro_hd { position:absolute; top:0; left: 0; z-index:10; 
+    width: 100%; height:32px; opacity:0.8;}
+
+    .pic_lst { clear: both; width: 100%; padding-bottom: 80px;}
+    .pic_lst:after { content: ""; display: block; clear: both;}
+    .pic_lst li { float: left; margin-bottom: 40px;}
+    .pic_lst li a { display: block;  width: 540px; margin-right: 40px; overflow: hidden; height:auto;}
+    .pic_lst li a img {display: block; position:relative; width:590px; height:auto; }
+    .pic_lst li a:hover img { margin-left: 0; background-color: rgba(255, 255, 255, 0.424); opacity: 0.99; transition-duration:0.65s;}
+    .pic_lst li a .hv_box { width: 540px; height: auto; color:#fff; opacity:0; position:absolute; bottom: 110px; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .pic_lst li a:hover .hv_box { opacity:1; }
+    .pic_tit { position:absolute; top:30px; left: 30px; font-size: 40px; font-weight: 700; }
+
+
+
+    .con_wrap { width: 100%; }
+
+    .seven { padding-left: 400px; }
+
+    .box1 { width: 400px; height: 800px;}
+    .box2 { width: 400px; height: 200px;}
+    .box3 { width: 400px; height: 200px;}
+
+
+     	/* 브라우저 마진과 패딩 리셋 */
+	* {margin:0;padding:0;}
+
+    /* INPUT 가리기 */
+    .section [id*="slide"] {display:none;}
+
+    /* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+    .section .slidewrap {max-width:2000px;margin:0 auto;overflow:hidden;position:relative;}
+    .section .slidelist {white-space:nowrap;font-size:0;}
+    .section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .9s;}
+    .section .slidelist > li > a {display:block;position:relative;}
+
+    /* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+    .section .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
+    .section .slide-control label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:65px;cursor:pointer;}
+    .section .slide-control .left {left:0;background:url('./img/icon/left.png') center center / 100% no-repeat;}
+    .section .slide-control .right {right:170px;background:url('./img/icon/right.png') center center / 100% no-repeat;}
+    .section .slide-control [class*="control"] {display:none;}
+
+    /* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+    .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .section [id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+
+    /*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+    .section [id="slide01"]:checked ~ .slidewrap .control01 {display:block;}
+    .section [id="slide02"]:checked ~ .slidewrap .control02 {display:block;}
+    .section [id="slide03"]:checked ~ .slidewrap .control03 {display:block;}   
+    .section [id="slide04"]:checked ~ .slidewrap .control04 {display:block;}
+
+
+    /* 페이징 */
+	.slide-pagelist {text-align:center;padding:20px;}
+	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+	.slide-pagelist > li > label {display:block;padding:7px 13px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+  .section input[id="slide04"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(4) > label {background:#999;}
+
+    
+    .pro_ra { display:none; }
+    .ban1 { clear:both; width: 100%; height:auto; margin:0 auto; overflow-x:hidden; }
+    .ban_img_fr { clear:both; width:9000px; margin-left: 0; transition-duration:0.6s; }
+    #pro_ra1:checked ~ .ban_img_fr { margin-left: 0; }
+    #pro_ra2:checked ~ .ban_img_fr { margin-left:-1200px; }
+    #pro_ra3:checked ~ .ban_img_fr { margin-left:-2400px; }
+    #pro_ra4:checked ~ .ban_img_fr { margin-left: -3600px; }
+    .ban_img_fr:after { content:""; display:block; clear:both; }
+    .ban_img_fr li { float:left; width: 1200px; margin: 0; }
+    .ban_img_fr li img { display:block; width: 100%; height: auto; margin: 0; }
+    .btn_fr { clear:both; }
+    .btn_group.left { float:left; }
+    .btn_group.left label { display:block; width: 12px; height: 12px; background-color:transparent; border:2px solid
+    rgb(141, 141, 141); border-radius: 50%; text-indent:-9999px; margin: 8px; cursor:pointer; }
+    #pro_ra1:checked ~ .btn_fr .btn_group.left li.item1 label { background-color:rgb(141, 141, 141); }
+    #pro_ra2:checked ~ .btn_fr .btn_group.left li.item2 label { background-color:rgb(141, 141, 141); }
+    #pro_ra3:checked ~ .btn_fr .btn_group.left li.item3 label { background-color:rgb(141, 141, 141); }
+    #pro_ra4:checked ~ .btn_fr .btn_group.left li.item4 label { background-color:rgb(141, 141, 141); }
+    .btn_group.right { float:right; }
+    .btn_group li { float:left; margin: 8px;}
+    .btn_group.right li a { display:block; width: 32px; height: 32px; background-repeat: no-repeat; background-size:32px
+    32px; }
+
+
+    /*footer*/
+    
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+  //DOM 생성 후
+var originalID, cloneID; //인터벌 포인터
+  window.addEventListener('DOMContentLoaded', function(){
+
+//롤링 배너 복제본 생성
+      let roller = document.querySelector('.roller');
+      roller.id = 'roller1';
+
+      let clone = roller.cloneNode(true);
+      clone.id = 'roller2';
+      document.querySelector('.wrap').appendChild(clone); //부착
+
+//원본, 복제본 배너 위치 지정
+      document.querySelector('#roller1').style.left = '0px';
+      document.querySelector('#roller2').style.left = document.querySelector('.roller ul').offsetWidth+'px';
+
+//클래스 할당
+      roller.classList.add('original');
+      clone.classList.add('clone');
+
+//인터벌 메서드로 애니메이션 생성
+      let rollerWidth = document.querySelector('.roller ul').offsetWidth;//회전 배너 너비값
+let betweenDistance = 1;//이동 크기 - 정수여야 함
+originalID = window.setInterval(betweenRollCallback, parseInt(1000/100), betweenDistance, document.querySelector('#roller1'));
+cloneID = window.setInterval(betweenRollCallback, parseInt(1000/100), betweenDistance, document.querySelector('#roller2'));
+
+//인터벌 애니메이션 함수(공용)
+function betweenRollCallback(d, roller){
+  let left = parseInt(roller.style.left);
+  roller.style.left = (left - d)+'px';//이동
+  //조건부 위치 리셋
+  if(rollerWidth + (left - d) <= 0){
+    roller.style.left = rollerWidth+'px';
+  }
+}		
+  });
+</script>
+
+  </head>
+
+  <body>
+  
+
+ 
+    <div id="nav-group">
+        <div class="container"> 
+            <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+              <div class="navbar-brand">
+                <a href="index.html" class="logo"><img src="./img/green.jpg" width="110" alt="로고"></a>
+                
+            
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start" id="gnb">
+                    <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                    
+    
+                       <div href="./notice.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              관광안내
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="./notice/notice.html">
+                                   공지사항
+                             </a>
+                           <a class="navbar-item" href="./notice/video.html">
+                            마포관광동영상
+                          </a>
+                        </div> 
+                    </div>     
+                    
+                    <div href="./tour.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              관광명소
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="./tour/nature.html">
+                                   자연속힐링
+                             </a>
+                           <a class="navbar-item" href="./tour/exhibit.html">
+                            체험관/전시장
+                          </a>
+                          <a class="navbar-item" href="./tour/concert.html">
+                            공연장
+                          </a>
+                        </div> 
+                    </div>
+                    
+                    <div href="./shopping.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              쇼핑
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="./shopping/mall.html">
+                                   쇼핑몰
+                             </a>
+                           <a class="navbar-item" href="./shopping/market.html">
+                                전통시장
+                          </a>
+                        </div> 
+                    </div>
+
+                    
+                    <div href="./food.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              음식
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="./food/mobeom.html">
+                                   모범음식점
+                             </a>
+                           <a class="navbar-item" href="./food/gwan.html">
+                           관광식당
+                          </a>
+                          <a class="navbar-item" href="./food/ansim.html">
+                           안심식당
+                          </a>
+                        </div> 
+                    </div>
+                        <div class="navbar-dropdown cate" id="cate04"></div>
+                    
+                    <div href="./history.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              역사
+                        </a>
+                        <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="./history/mapo.html">
+                            마포의 역사
+                          </a>
+                          <a class="navbar-item" href="./history/dong.html">
+                            동이름의 유래
+                          </a>
+                        </div> 
+                    </div>
+                    <div class="navbar-dropdown cate" id="cate05"></div>
+                        
+                </div>
+                
+                <div class="navbar-end" id="tnb">
+                  <div class="navbar-item">
+                      
+                
+                 <div class="buttons">
+                   <a href="./member/join.html" class="button is-success">
+                     회원가입
+                   </a>
+                   <a href="./member/login.html" class="button is-success">
+                     로그인
+                   </a>
+                     
+                 </div>
+                
+              </div>
+            </div>
+              </div>
+            </nav>
+        <script>
+        $(document).ready(function(){
+            $.ajax({
+                url:"/web03/MenuLoadCtrl.html",
+                type:"POST",
+                enctype:"UTF-8",
+                datatype:"json",
+                processData:false,
+                contentType:false, 
+                cache:false,
+                success:function(data){
+                    $(".navbar-dropdown.cate").empty();
+                    var trans = $.parseJSON(data);
+                    $.each(trans, function(key, value){
+                        if(key=="data"){
+                            for(var i=0;i<value.length;i++){
+                                if(value[i].cate=="A"){
+                                    $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="B"){
+                                    $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="C"){
+                                    $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="D"){
+                                    $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="E"){
+                                    $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="F"){
+                                    $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="G"){
+                                    $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                }
+                            }
+                        }
+                    });
+                    
+                }
+            });
+        });
+        </script>
+        </div>
+    </div>
+
+    
+    <div class="content">
+      <figure class="vs">
+  <section class="page">
+          <div class="con_wrap">
+  
+              <div class="section">
+                <br><br><br>
+                  <input type="radio" name="slide" id="slide01" checked>
+                  <input type="radio" name="slide" id="slide02">
+                  <input type="radio" name="slide" id="slide03">
+                  <input type="radio" name="slide" id="slide04">
+                  <input type="radio" name="slide" id="slide05">
+                  <input type="radio" name="slide" id="slide06">
+                  <div class="slidewrap">
+                      <ul class="slidelist">
+                          <li>
+                              <a>
+                                  <img src="./img/index/1.jfif">
+                              </a>
+                          </li>
+                          <li>
+                              <a>
+                                  <img src="./img/index/2.jfif">
+                              </a>
+                          </li>
+                          <li>
+                              <a>
+                                  <img src="./img/index/3.jfif">
+                              </a>
+                          </li>
+                          <li>
+                              <a>
+                                  <img src="./img/index/4.jfif">
+                              </a>
+                          </li>
+                      </ul>
+              
+                      <div class="slide-control">
+                          <div class="control01">
+                              <label for="slide04" class="left"></label>
+                              <label for="slide02" class="right"></label>
+                          </div>
+                          <div class="control02">
+                              <label for="slide01" class="left"></label>
+                              <label for="slide03" class="right"></label>
+                          </div>
+                          <div class="control03">
+                              <label for="slide02" class="left"></label>
+                              <label for="slide04" class="right"></label>
+                          </div>
+                          <div class="control04">
+                              <label for="slide03" class="left"></label>
+                              <label for="slide01" class="right"></label>
+                          </div>
+                      </div>
+  
+                          <!-- 페이징 -->
+                  <ul class="slide-pagelist">
+                <li><label for="slide01"></label></li>
+                <li><label for="slide02"></label></li>
+                <li><label for="slide03"></label></li>
+                <li><label for="slide04"></label></li>
+                  </ul>
+  
+                  </div>
+              </div>
+  
+
+              <div class="container">       
+                <div class="rollingbanner">
+                  <div class="wrap">
+                    <div class="roller">
+                      <ul>
+                        <li class="hongdae1">
+                          <a href="#">
+                            <strong class="name">2022년 12월 홍대 걷고싶은거리 버스킹존 주말, 공휴일 추첨 결과 및 추가신청 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</strong>
+                          </a>
+                        </li>
+                        <li class="hongdae2">
+                          <a href="#">
+                            <strong class="name">홍대 걷고싶은거리 버스킹존 운영 및 12월 주말(금~일)·공휴일 공연 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</strong>
+                          </a>
+                        </li>
+                        <li class="hogdae2">
+                          <a href="#">
+                            <strong class="name">「홍대 걷고싶은거리 버스커 사전 등록제」 시행 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</strong>
+                          </a>
+                        </li>
+                        <li class="outside">
+                          <a href="#">
+                            <strong class="name">야외공연장 11월 사용신청 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</strong>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+
+
+              </div>
+  </section>
+  </figure>
+  </div>
+
+
+</body>
+        
+    <footer class="footer">
+      <div class="content has-text-centered">
+      
+        <p> 
+    
+          <a href="https://jgthms.com">개인정보처리방침 |</a>
+          <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
+          <a href="https://jgthms.com">홈페이지 개선의견</a><br><br>
+          03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
+             야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9
+        </p>
+      </div>
+    </footer>
+      
+
+
+</html>

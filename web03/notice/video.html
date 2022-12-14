@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>마포 관광 동영상</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <style>
+
+        /*header*/
+  
+.table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro03/data/green.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+.content { clear:both; width: 100%;}
+.page { clear:both; width: 100%;}
+
+    .page_tit {text-align: center;}
+    .lst {padding-left: 500px; }
+    .buttons {padding-left: 850px;}
+
+        /*footer*/
+    
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+
+    </style>
+    
+  </head>
+
+  <body>
+  
+
+ 
+    <div id="nav-group">
+      <div class="container"> 
+          <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+            <div class="navbar-brand">
+              <a href="../index.html" class="logo"><img src="../img/green.jpg" width="110" alt="로고"></a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start" id="gnb">
+                  <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                  
+  
+                     <div href="./notice.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광안내
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../notice/notice.html">
+                                 공지사항
+                           </a>
+                         <a class="navbar-item" href="../notice/video.html">
+                          마포관광동영상
+                        </a>
+                      </div> 
+                  </div>     
+                  
+                  <div href="./tour.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광명소
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../tour/nature.html">
+                                 자연속힐링
+                           </a>
+                         <a class="navbar-item" href="../tour/exhibit.html">
+                          체험관/전시장
+                        </a>
+                        <a class="navbar-item" href="../tour/concert.html">
+                          공연장
+                        </a>
+                      </div> 
+                  </div>
+                  
+                  <div href="./shopping.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            쇼핑
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../shopping/mall.html">
+                                 쇼핑몰
+                           </a>
+                         <a class="navbar-item" href="../shopping/market.html">
+                              전통시장
+                        </a>
+                      </div> 
+                  </div>
+
+                  
+                  <div href="./food.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            음식
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../food/mobeom.html">
+                                 모범음식점
+                           </a>
+                         <a class="navbar-item" href="../food/gwan.html">
+                         관광식당
+                        </a>
+                        <a class="navbar-item" href="../food/ansim.html">
+                         안심식당
+                        </a>
+                      </div> 
+                  </div>
+                      <div class="navbar-dropdown cate" id="cate04"></div>
+                  
+                  <div href="./history.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            역사
+                      </a>
+                      <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../history/mapo.html">
+                          마포의 역사
+                        </a>
+                        <a class="navbar-item" href="../history/dong.html">
+                          동이름의 유래
+                        </a>
+                      </div> 
+                  </div>
+                  <div class="navbar-dropdown cate" id="cate05"></div>
+                      
+              </div>
+              
+              <div class="navbar-end" id="tnb">
+                <div class="navbar-item">
+                    
+              
+               <div class="buttons">
+                 <a href="../member/join.html" class="button is-success">
+                   회원가입
+                 </a>
+                 <a href="../member/login.html" class="button is-success">
+                   로그인
+                 </a>
+                   
+               </div>
+              
+            </div>
+          </div>
+            </div>
+          </nav>
+      <script>
+      $(document).ready(function(){
+          $.ajax({
+              url:"/web03/MenuLoadCtrl.html",
+              type:"POST",
+              enctype:"UTF-8",
+              datatype:"json",
+              processData:false,
+              contentType:false, 
+              cache:false,
+              success:function(data){
+                  $(".navbar-dropdown.cate").empty();
+                  var trans = $.parseJSON(data);
+                  $.each(trans, function(key, value){
+                      if(key=="data"){
+                          for(var i=0;i<value.length;i++){
+                              if(value[i].cate=="A"){
+                                  $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="B"){
+                                  $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="C"){
+                                  $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="D"){
+                                  $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="E"){
+                                  $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="F"){
+                                  $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="G"){
+                                  $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              }
+                          }
+                      }
+                  });
+                  
+              }
+          });
+      });
+      </script>
+      </div>
+  </div>
+     
+
+    <div class="content">
+      <section class="page" id="page1">
+          <div class="page_wrap"><br><br><br>
+               <h2 class="page_tit">마포 관광 동영상</h2><br><br>
+               <ul class="lst" style="list-style: none";>
+                   <li class="left">
+                       <iframe name="vdo2" id="vdo2" width="816" height="459" src="https://www.youtube.com/embed/dEYU-ki4Tgs" title="마포 관광 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   </li><br><br>
+                   <p>마포는 아름다운 청춘을 보낼 수 있는 곳이 많이 있습니다.<br>
+                    쇼핑, 먹거리, 역사, 문화예술 등을 포함하여 Exploration(모험), Healing(힐링), Passion(열정) 총 3개의 테마로 구성하였습니다.<br>
+                    그럼, 20대의 마지막을 마포에서 보내는 ‘ 엘리사＇를 따라 마포의 청춘을 즐겨보세요.<br><br><i>(영어, 중국어, 일본어 더빙편 제공)</i></p>
+               </ul><br><br>
+               <ul class="lst" style="list-style: none";>
+                <li class="left">
+                    <iframe name="vdo2" id="vdo2" width="816" height="459" src="https://www.youtube.com/embed/0Jeob2pKSsU" title="마포 관광 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li><br><br>
+                <p>마포의 구석구석을 5가지 테마별로 즐겨보세요!<br>
+                  Trend(힙한마포), Taste(특별한 만찬), Tradition(뿌리깊은 역사), Healing(여유있는 힐링), Passion(흥미로운 체험)</p>
+            </ul>
+           </div><br><br>
+           <div class="buttons">
+            <a href="/web03/notice/addVideo.html" class="button is-success">글 등록</a>
+          </div><br><br>
+       </section>
+      
+        
+        <style>
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+        </style>
+        
+    <footer class="footer">
+      <div class="content has-text-centered">
+      
+        <p> 
+    
+          <a href="https://jgthms.com">개인정보처리방침 |</a>
+          <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
+          <a href="https://jgthms.com">홈페이지 개선의견</a><br><br>
+          03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
+           야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9
+        </p>
+      </div>
+    </footer>
+      
+    </body>
+
+    </html>

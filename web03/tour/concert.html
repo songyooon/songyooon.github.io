@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>장소 목록</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+    /*header*/
+  
+    .table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro03/data/green.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+.content { clear:both; width: 100%;}
+.page { clear:both; width: 100%;}
+
+
+    /*footer*/
+    
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <body>
+  
+
+ 
+    <div id="nav-group">
+      <div class="container"> 
+          <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+            <div class="navbar-brand">
+              <a href="../index.html" class="logo"><img src="../img/green.jpg" width="110" alt="로고"></a>
+              
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start" id="gnb">
+                  <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                  
+  
+                     <div href="./notice.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광안내
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../notice/notice.html">
+                                 공지사항
+                           </a>
+                         <a class="navbar-item" href="../notice/video.html">
+                          마포관광동영상
+                        </a>
+                      </div> 
+                  </div>     
+                  
+                  <div href="./tour.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            관광명소
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../tour/nature.html">
+                                 자연속힐링
+                           </a>
+                         <a class="navbar-item" href="../tour/exhibit.html">
+                          체험관/전시장
+                        </a>
+                        <a class="navbar-item" href="../tour/concert.html">
+                          공연장
+                        </a>
+                      </div> 
+                  </div>
+                  
+                  <div href="./shopping.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            쇼핑
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../shopping/mall.html">
+                                 쇼핑몰
+                           </a>
+                         <a class="navbar-item" href="../shopping/market.html">
+                              전통시장
+                        </a>
+                      </div> 
+                  </div>
+
+                  
+                  <div href="./food.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            음식
+                      </a>
+                      <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="../food/mobeom.html">
+                                 모범음식점
+                           </a>
+                         <a class="navbar-item" href="../food/gwan.html">
+                         관광식당
+                        </a>
+                        <a class="navbar-item" href="../food/ansim.html">
+                         안심식당
+                        </a>
+                      </div> 
+                  </div>
+                      <div class="navbar-dropdown cate" id="cate04"></div>
+                  
+                  <div href="./history.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                      <a class="navbar-link is-arrowless">
+                            역사
+                      </a>
+                      <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../history/mapo.html">
+                          마포의 역사
+                        </a>
+                        <a class="navbar-item" href="../history/dong.html">
+                          동이름의 유래
+                        </a>
+                      </div> 
+                  </div>
+                  <div class="navbar-dropdown cate" id="cate05"></div>
+                      
+              </div>
+              
+              <div class="navbar-end" id="tnb">
+                <div class="navbar-item">
+                    
+              
+               <div class="buttons">
+                 <a href="./member/join.html" class="button is-success">
+                   회원가입
+                 </a>
+                 <a href="./member/login.html" class="button is-success">
+                   로그인
+                 </a>
+                   
+               </div>
+              
+            </div>
+          </div>
+            </div>
+          </nav>
+      <script>
+      $(document).ready(function(){
+          $.ajax({
+              url:"/web03/MenuLoadCtrl.html",
+              type:"POST",
+              enctype:"UTF-8",
+              datatype:"json",
+              processData:false,
+              contentType:false, 
+              cache:false,
+              success:function(data){
+                  $(".navbar-dropdown.cate").empty();
+                  var trans = $.parseJSON(data);
+                  $.each(trans, function(key, value){
+                      if(key=="data"){
+                          for(var i=0;i<value.length;i++){
+                              if(value[i].cate=="A"){
+                                  $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="B"){
+                                  $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="C"){
+                                  $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="D"){
+                                  $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="E"){
+                                  $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="F"){
+                                  $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              } else if(value[i].cate=="G"){
+                                  $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                              }
+                          }
+                      }
+                  });
+                  
+              }
+          });
+      });
+      </script>
+      </div>
+  </div>
+        <nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #fff; padding-bottom:8px; min-height:48px; line-height:48px;">
+          <ul style="float:right;">
+            <li><a href="../index.html">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">전체 장소 목록</a></li>
+          </ul>
+        </nav>
+      <section class="section">
+        <div class="container">
+          <h1 class="title">장소 목록</h1>
+            <form name="frm1" id="frm1" class="search_form" action="/pro03/GetPlaceSearchCtrl.html" method="get">
+                <div class="select inline">
+                    <select name="sel" id="sel" required="">
+                        <option value="">선택</option>
+                        <option value="place">장소명</option>
+                        <option value="comment2">장소설명</option>
+                        <option value="place+comment2">장소명+장소설명</option>
+                    </select>
+                </div><br><br>
+                <input type="text" name="keyword" id="keyword" class="input inline" placeholder="검색어 입력" required=""><br><br>
+                <input type="submit" class="button is-success inline" value="검색">
+            </form><br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Num">번호</abbr></th>
+                  <th><abbr title="Cate">분류</abbr></th>
+                  <th><abbr title="Place">장소</abbr></th>
+                  <th><abbr title="Comment">설명</abbr></th>
+                </tr>
+              </thead>
+               <tbody>
+               
+                <tr>
+                  <td>1</td>
+                  <td>
+                     
+                    
+                    
+                    <span>공연</span>
+                    
+                    
+                  </td>
+                  <td>
+                      <a href="/web03/GetTourDetailCtrl.html?no=22">아르떼홀</a>
+                  </td>
+                  <td>
+                      <p class="comment2">아르떼홀은 많은 연주자들에게 보다 나은 공연장소와 기회를 제공하고자 아르떼 TV가 2010년 1월 개관한 음악 전용홀입니다. 아르떼 홀은 인위적인 확성 음향 공연보다는 클래식, 국악공연의 자연적인 울림에 최적화되어 있으며 최신음향, 조명, 촬영장비를 갖추고 있습니다. 또한 196석 반원형구조의 객석은 연주자와 관객이 보다 가까이 접할 수 있도록 무대와의 거리를 최소화시켰으며, 공연 관람의 쾌적함과 편리함을 제공합니다.</p>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>2</td>
+                  <td>
+                     
+                    
+                    
+                    <span>공연</span>
+                    
+                    
+                  </td>
+                  <td>
+                      <a href="/web03/GetTourDetailCtrl.html?no=23">블루라이트 라이브홀</a>
+                  </td>
+                  <td>
+                      <p class="comment2">블루라이트 라이브 홀은 2011년 5월 개관 이래 음악, 연극, 무용, 뮤지컬 등 다양한 공연과 각종 세미나가 이루어지고 있는 복합 문화 공간입니다. 블루라이트 라이브 홀은 공간에 적합한 최고의 음향, 조명, 영상시설을 갖추고 있으며 무대공간의 폭넓은 활용을 위해 조립식 단을 사용하고 있습니다. 공연에 맞춰 다양하게 객석의 형태와 위치를 변화시킬 수 있으며 , 공연장 내부를 볼 수 있는 대기실, 로비 등의 편의 시설을 갖추고 있습니다.</p>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>3</td>
+                  <td>
+                     
+                    
+                    
+                    <span>공연</span>
+                    
+                    
+                  </td>
+                  <td>
+                      <a href="/web03/GetTourDetailCtrl.html?no=24">예스24 무브홀</a>
+                  </td>
+                  <td>
+                      <p class="comment2">홍대 라이브씬의 새로운 대안, MUV HALL은 공연에 최적화된 공연장입니다. 아티스트와 공연기획자에게 뛰어난 퀄리티의 공연으로 관객과 호흡할 수 있는 공간이며, 관객들은 좋은 공연을 편리하게 즐길 수 있는 쾌적한 환경을 보유하고 있습니다. 심플하면서도 엔틱한 인테리어는 타 공연장들의 딱딱하고 삭막한 인테리어와는 차별화된 분위기를 느낄 수 있습니다. 대형 LED스크린을 통한 다양한 연출이 가능하며 어떠한 장르의 공연도 소화할 수 있는 뛰어난 시스템을 갖추고 있습니다.</p>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>4</td>
+                  <td>
+                     
+                    
+                    
+                    <span>공연</span>
+                    
+                    
+                  </td>
+                  <td>
+                      <a href="/web03/GetTourDetailCtrl.html?no=25">대안공간 LOOP</a>
+                  </td>
+                  <td>
+                      <p class="comment2">1999년, 홍대에 자리를 튼, 대안공간 루프는 대한민국 1세대 대안공간으로서 동시대 미술의 새롭고 실험적인 흐름과 함께 다채로운 활동들을 펼쳐오고 있습니다. 잠재적 가능성을 지닌 재능 있고 실험적인 작가 발굴 및 지원은 물론, 일찍부터 국내외 미술계와의 다양한 교류와 네트워킹을 바탕으로 한, 실험적인 글로벌 미술문화의 동시대적 흐름을 알리고, 특히나 아시아의 대안적 미술문화 발전이라는 문제의식과 소명을 바탕으로 이를 구현하기 위한 다각적인 모색과 실천들을 지속적으로 전개해오고 있습니다. 루프의 대표적인 기획으로는 ‘무브온아시아’, ‘감각의 확장’, ‘여론의 공론장’, ‘감각의 확장’ ‘미디어아카이브 네트워크 포럼’, ‘아시아 창작공간 네트워크’ 등이 있습니다.</p>
+                  </td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+            
+            <div class="buttons">
+              <a href="/web03/tour/addTour.html" class="button is-success">장소 등록</a>
+            </div>
+            
+        </div>
+      </section>
+      
+        
+        <style>
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+        </style>
+        
+    <footer class="footer">
+      <div class="content has-text-centered">
+      
+        <p> 
+    
+          <a href="https://jgthms.com">개인정보처리방침 |</a>
+          <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
+          <a href="https://jgthms.com">홈페이지 개선의견</a><br><br>
+          03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
+             야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9
+        </p>
+      </div>
+    </footer>
+      
+    </body>
+
+</html>

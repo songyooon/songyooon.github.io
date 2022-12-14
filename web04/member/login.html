@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE</title>
+       <!-- 메타포 -->
+       <meta name="description" content="LOTTE is Korea's largest food business group, providing the nation with almost any food product or service.">
+       <meta name="keywords" content="LOTTE, 롯데, 롯데그룹, 롯데지주, 신동빈">
+       <!-- 오픈그래프 -->
+       <meta property="og:site_name" content="LOTTE">
+       <meta property="og:title" content="LOTTE">
+       <meta property="og:url" content="https://www.lotte.co.kr/">
+       <meta property="og:type" content="website">
+       <meta property="og:description" content="LOTTE is Korea's largest food business group, providing the nation with almost any food product or service.">
+       <meta property="og:image" content="./img/logo/img_symbol_logo.png"> 
+       <meta property="og:image:width" content="800">
+       <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <style>
+    /* header.css */
+
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+    a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    .logo {width: 200px; padding-top: 17px; padding-left: 40px;}
+    .buttons {padding-left: 650px;}
+    .navbar {padding-top: 25px;}
+    .table {font-family: georgia; font-style: italic;}
+    .msg {font-size: 12px; padding-top: 8px;}
+    .input {font-size: 12px; width: 200px;}
+    .form-row { width: 200px;}
+    .th {width: 25px;}
+    .frm1 {padding-left: 500px;}
+
+
+    .ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
+.ft_wrap:after { content:""; display:block; clear:both; }
+.ft_logo { float:left; width: 150px; }
+.left { float:left; width: 460px; padding-left: 50px; }
+.right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.fnb { clear:both; }
+.fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
+.fnb a.dpc { color:rgb(0, 0, 0); }
+.addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
+font-size:12px; line-height: 2; }
+.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px;}
+.sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
+height: 40px; line-height: 44px; text-align:center; width: 140px; }
+#sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
+#sel option { color:rgb(0, 0, 0); }
+
+.to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+background-color:rgba(0, 0, 0, 0.268); color:#fff; display:block; width: 60px;
+height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+.to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
+.to_top.on { visibility: visible; }
+
+    /*header*/
+  
+    .table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro03/data/green.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+.content { clear:both; width: 100%;}
+.page { clear:both; width: 100%;}
+
+
+.title { padding-top:36px; padding-bottom:20px; text-align:center; font-size: 25px; font-family: georgia; font-style: italic;}
+.form-check-label {padding-left:450px; }
+.btn-group {padding-left:100px; }
+
+
+    /*footer*/
+
+
+</style>
+
+<!-- Hotjar Tracking Code for my site -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3286250,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+</head>
+
+
+
+
+<div class="wrap">
+    <header class="hd">
+       <div class="hd_wrap">
+           <a href="./index.html" class="logo"><img src="./img/logo/img_symbol_logo.png" width="30" alt="로고"></a>
+           <nav class="tnb">
+               <a href="../login.html">로그인</a>
+               <a href="../join.html">회원가입</a>
+           </nav>
+           <nav class="gnb">
+               <ul>
+                   <li class="item1">
+                       <a href="https://www.lush.co.kr/service/introduction" class="dp1">About Lotte</a>
+                       <ul class="sub">
+                           <li><a href="brand.html#page1">비전</a></li>
+                           <li><a href="brand.html#page2">핵심가치</a></li>
+                           <li><a href="brand.html#page3">CEO</a></li>
+                       </ul>
+                   </li>
+                   <li class="item2">
+                       <a href="https://www.lush.co.kr/categories/index/113" class="dp1">ESG</a>
+                       <ul class="sub">
+                           <li><a href="product.html#page1">롯데 ESG</a></li>
+                           <li><a href="product.html#page2">ESG 평가</a></li>
+                           <li><a href="product.html#page3">ESG 뉴스</a></li>
+                       </ul>
+                   </li>
+                   <li class="item3">
+                       <a href="https://www.lush.co.kr/board/shop" class="dp1">IR</a>
+                       <ul class="sub">
+                           <li><a href="offline.html#page1">지배구조</a></li>
+                           <li><a href="offline.html#page2">주주정책</a></li>
+                           <li><a href="offline.html#page3">재무정보</a></li>
+                       </ul>
+                   </li>
+                   <li class="item4">
+                       <a href="https://www.lush.co.kr/event/list" class="dp1">Careers</a>
+                       <ul class="sub">
+                           <li><a href="community.html#page1">인재상</a></li>
+                           <li><a href="community.html#page2">채용전형</a></li>
+                           <li><a href="community.html#page3">인사제도</a></li>
+                       </ul>
+                   </li>
+                   <li class="item5">
+                       <a href="https://www.lush.co.kr/mypage/faq" class="dp1">CS center</a>
+                       <ul class="sub">
+                           <li><a href="service.html#page1">문의하기</a></li>
+                           <li><a href="service.html#page2">오시는 길</a></li>
+                       </ul>
+                   </li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+
+
+    <body>
+
+      <section class="section">
+        <div class="container">
+        <h2 class="title">login</h2>
+        <form name="frm1" id="frm1" class="frm1" action="../index.html" method="post" onsubmit="return joinCheck(this)">
+            <table class="table" rules="none">
+                <tbody>
+                    <tr>
+                        <th class="th">id</th>
+                        <td>
+                            <div class="form-row">
+                                <input type="text" name="id" id="id" placeholder="아이디 입력" class="input is-rounded" autofocus="" required="">
+                            </div>
+                            <div>      
+                                    <p></p>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">pass</th>
+                        <td><input type="password" name="pw" id="pw" placeholder="비밀번호 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn-group">
+                <input type="submit" name="submit-btn" class="button is-small is-rounded" value="LOGIN">
+                <input type="reset" name="reset-btn" class="button is-small is-rounded" value="BACK">
+            </div>
+        </form>	
+        <script>
+        </script>
+    </div>
+    </section>
+    
+    </body>
+        
+    <footer class="ft">
+        <div class="ft_wrap">
+            
+            <div class="mid_box">
+                <nav class="fnb">
+                    <div class="ft_logo"><img src="./img/logo/img_footer_logo.png" width="40" height:auto alt="lotte"></div><br><br><br>
+                    <a class="a" href="https://www.lotte.co.kr/privacy/agree.do">개인정보처리방침 </a>
+                    <a class="a" href="https://www.lotte.co.kr/cscenter/qna.do">CS CENTER </a>
+                    <a class="a" href="https://www.lotte.co.kr/cmmn/siteMap.do">SITEMAP</a><br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/lotte"><img src="./img/logo/btn_facebook.png"  width="7" height: auto alt="facebook" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://blog.lotte.co.kr/"><img src="./img/logo/btn_blog.png"  width="9" height: auto alt="blog" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.youtube.com/user/LOTTELIVE"><img src="./img/logo/btn_youtube.png"  width="15" height: auto alt="youtube" class="pic"></a>
+                    <p class="copyright">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 1996-2017 LOTTE. All Rights reserved.</p>
+                </nav>
+            </div>
+    </footer>
+
+</html>

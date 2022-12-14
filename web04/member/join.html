@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE</title>
+       <!-- 메타포 -->
+       <meta name="description" content="LOTTE is Korea's largest food business group, providing the nation with almost any food product or service.">
+       <meta name="keywords" content="LOTTE, 롯데, 롯데그룹, 롯데지주, 신동빈">
+       <!-- 오픈그래프 -->
+       <meta property="og:site_name" content="LOTTE">
+       <meta property="og:title" content="LOTTE">
+       <meta property="og:url" content="https://www.lotte.co.kr/">
+       <meta property="og:type" content="website">
+       <meta property="og:description" content="LOTTE is Korea's largest food business group, providing the nation with almost any food product or service.">
+       <meta property="og:image" content="./img/logo/img_symbol_logo.png"> 
+       <meta property="og:image:width" content="800">
+       <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+   <style>
+    /* header.css */
+    .logo {padding-left: 500px; width: 50px; padding-bottom: 15px;}
+
+    .content { clear:both; width: 100%;}
+    .vs { clear:both; width: 100%; height:100vh; overflow:hidden;}
+    .vdo { display:block; width:100%; height:auto; }
+    .page { clear:both; width: 100%;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    .page_tit { text-align: center; font-size:32px; padding-top: 1.2em; padding-bottom: 0.8em;}
+    .lst { clear:both; width: 1200px;}
+    .lst:after { content:""; display:block; clear:both; }
+    .lst li { margin-bottom: 40px;}
+    .lst li.left { float:left; width: 816px; height: 459px;}
+    .lst li.right { float:right; width: 350px; height: 459px;}
+    .ico_lst { clear: both; width: 100%; overflow: hidden;}
+    .ico_lst li a { display: block; background-repeat: no-repeat; background-position: 0px center; background-size: auto 80%; padding-left: 80px;}
+    .ico_lst li a.icon1 { background-image: url("./img/icon/1.svg");}
+    .ico_lst li a.icon2 { background-image: url("./img/icon/2.svg");}
+    .ico_lst li a.icon3 { background-image: url("./img/icon/3.svg");}
+    .cate_tit { color: #000; font-size: 20px; padding-bottom: 0.5em;}
+    .cate_com { color:#000; font-size: 14px;}
+    
+    .pic_lst { clear: both; width: 100%; padding-bottom: 80px;}
+    .pic_lst:after { content: ""; display: block; clear: both;}
+    .pic_lst li { float: left; position: relative; margin-bottom: 40px;}
+    .pic_lst li a { display: block; width: 360px; margin-right: 40px; overflow: hidden; height:360px;}
+    .pic_lst li a img {display: block; width:360px; height:auto; }
+    .pic_lst li a:hover img { margin-left: 0; }
+    .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .pic_lst li a:hover .hv_box { opacity:1; }
+    .pic_tit { position:absolute; top:30px; left: 30px; 
+    text-shadow:0px 0px 3px #000; }
+    .pic_com { position:absolute; right:30px; bottom:30px; 
+    background-color: rgba(247, 0, 0, 0.739); color: #000; border-radius:9px;}
+
+    #page3 { background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position:center; height: 100vh; overflow:hidden; }
+    #page3 .page_wrap { width: 100%; }
+    .circle_lst { clear:both; width: 4455px; }
+    .circle_lst li { width: 200px; height: 200px; position:relative; border-radius:120px; overflow:hidden; background-color: #fff;
+    float:left; margin:28px;  }
+    .circle_lst.lst2 li { float:right; }
+    .circle_lst li a { display:block; width: 100%; height: 100%; }
+    .circle_lst li a img { display:block; width:190px; height:auto; 
+    position:absolute; top:50%; left: 7px; z-index:11; margin-top: -90px; }
+
+       /* header.css */
+
+
+       a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+    a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    .logo {width: 200px; padding-top: 17px; padding-left: 40px;}
+    .buttons {padding-left: 650px;}
+    .navbar {padding-top: 25px;}
+    .table {font-family: georgia; font-style: italic;}
+    .msg {font-size: 12px; padding-top: 8px;}
+    .input {font-size: 12px; width: 300px;}
+    .form-row { width: 300px;}
+    .th {width: 25px;}
+    .frm1 {padding-left: 400px;}
+
+
+
+    /*header*/
+  
+.table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/web05/img/logo/logo.svg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+.content { clear:both; width: 100%;}
+.page { clear:both; width: 100%;}
+
+.title { padding-top:36px; padding-bottom:20px; text-align:center; font-size: 25px; font-family: georgia; font-style: italic;}
+.btn-group { padding-left:200px;}
+#id { width:780px; float:left; margin-right:30px; margin-left:6px; }
+
+
+    /* footer */
+
+    </style>
+    <link rel="stylesheet" href="./css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".hd").css("position","absolute");
+        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+        $lst1_obj = $(".circle_lst li").clone();
+        $(".circle_lst.lst2").append($lst1_obj);
+    });    
+    </script>
+
+<!-- Hotjar Tracking Code for my site -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3286250,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+</head>
+
+
+</head>
+
+
+
+
+<div class="wrap">
+    <header class="hd">
+       <div class="hd_wrap">
+           <a href="./index.html" class="logo"><img src="./img/logo/img_symbol_logo.png" width="30" alt="로고"></a>
+           <nav class="tnb">
+               <a href="../login.html">로그인</a>
+               <a href="../join.html">회원가입</a>
+           </nav>
+           <nav class="gnb">
+               <ul>
+                   <li class="item1">
+                       <a href="https://www.lush.co.kr/service/introduction" class="dp1">About Lotte</a>
+                       <ul class="sub">
+                           <li><a href="brand.html#page1">비전</a></li>
+                           <li><a href="brand.html#page2">핵심가치</a></li>
+                           <li><a href="brand.html#page3">CEO</a></li>
+                       </ul>
+                   </li>
+                   <li class="item2">
+                       <a href="https://www.lush.co.kr/categories/index/113" class="dp1">ESG</a>
+                       <ul class="sub">
+                           <li><a href="product.html#page1">롯데 ESG</a></li>
+                           <li><a href="product.html#page2">ESG 평가</a></li>
+                           <li><a href="product.html#page3">ESG 뉴스</a></li>
+                       </ul>
+                   </li>
+                   <li class="item3">
+                       <a href="https://www.lush.co.kr/board/shop" class="dp1">IR</a>
+                       <ul class="sub">
+                           <li><a href="offline.html#page1">지배구조</a></li>
+                           <li><a href="offline.html#page2">주주정책</a></li>
+                           <li><a href="offline.html#page3">재무정보</a></li>
+                       </ul>
+                   </li>
+                   <li class="item4">
+                       <a href="https://www.lush.co.kr/event/list" class="dp1">Careers</a>
+                       <ul class="sub">
+                           <li><a href="community.html#page1">인재상</a></li>
+                           <li><a href="community.html#page2">채용전형</a></li>
+                           <li><a href="community.html#page3">인사제도</a></li>
+                       </ul>
+                   </li>
+                   <li class="item5">
+                       <a href="https://www.lush.co.kr/mypage/faq" class="dp1">CS center</a>
+                       <ul class="sub">
+                           <li><a href="service.html#page1">문의하기</a></li>
+                           <li><a href="service.html#page2">오시는 길</a></li>
+                       </ul>
+                   </li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+
+
+    <body>
+
+      <section class="section">
+        <div class="container">
+        <h2 class="title">join</h2>
+        <form name="frm1" id="frm1" class="frm1" action="../main.html" method="post" onsubmit="return joinCheck(this)">
+            <table class="table">
+                <tbody class="tbody">
+                    <tr>
+                        <th class="th">id</th>
+                        <td>
+                            <div class="form-row">
+                                <input type="text" name="id" id="id" placeholder="아이디 입력" class="input is-rounded" autofocus="" required=""><br><br>
+                                <input type="button" class="button is-small is-rounded" value="ID CHECK" onclick="idCheck()">
+                                <input type="hidden" name="idck" id="idck" value="no">
+                            </div>
+                            <div>
+                                <p class="msg" id="msg" style="padding-left:0.5rem">아이디 중복 체크를 하지 않으셨습니다</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">pass</th>
+                        <td><input type="password" name="pw" id="pw" placeholder="비밀번호 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">confirm</th>
+                        <td><input type="password" name="pw2" id="pw2" placeholder="비밀번호  확인 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">name</th>
+                        <td><input type="text" name="name" id="name" placeholder="이름 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">email</th>
+                        <td><input type="email" name="email" id="email" placeholder="이메일 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">birth</th>
+                        <td><input type="date" name="birth" id="birth" placeholder="생년월일 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">phone number</th>
+                        <td><input type="tel" name="tel" id="tel" maxlength="11" placeholder="전화번호 - 제외하고 숫자만 입력" class="input is-rounded" required=""></td>
+                    </tr>
+                    <tr>
+                        <th class="th">address</th>
+                        <td><input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input is-rounded" required=""><br><br>
+                        <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input is-rounded" padding-top="10px" required=""><br><br>
+                        <input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="input is-rounded">
+                        <button id="post_btn" onclick="findAddr()" class="button is-small is-rounded">우편번호 검색</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn-group">
+                <input type="submit" name="submit-btn" class="button is-small is-rounded" value="JOIN">
+                <input type="reset" name="reset-btn" class="button is-small is-rounded" value="BACK">
+            </div>
+        </form>	
+        <script>
+        $(document).ready(function(){
+            $("#id").keyup(function(){
+                $("#idck").val("no");
+                if($(this).val()!=""){
+                    $("#msg").html("아이디 입력 중입니다");
+                } else {
+                    $("#msg").html("아이디 중복 여부를 확인해주세요");
+                }
+            });
+        });
+        </script>
+        <script>
+        function idCheck(){
+            if($("#id").val()==""){
+                alert("아이디를 입력해주세요");
+                $("#id").focus();
+                return;
+            } 
+            var params = {	id : $("#id").val()	} 
+            $.ajax({
+                url:"/pro03/IdCheckCtrl.html",
+                type:"post",		
+                dataType:"json",	
+                data:params,		
+                success:function(result){
+                    console.log(result.result);
+                    var idChk = result.result;	
+                    if(idChk==false){	
+                        $("#idck").val("no");
+                        $("#msg").html("<strong>사용 중인 아이디입니다</strong>");
+                        $("#id").focus();
+                    } else if(idChk==true){	
+                        $("#idck").val("yes");
+                        $("#msg").html("<strong>사용 가능한 아이디입니다</strong>");
+                    } else if(idck==""){
+                        $("#msg").html("<strong>아이디가 확인되지 않았습니다 다시 시도해주세요</strong>");
+                    }
+                }
+            });
+        }
+        function joinCheck(f){
+            if(f.pw.value!=f.pw2.value){
+                alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
+                f.pw.focus();
+                return false;
+            }
+            if(f.idck.value!="yes"){
+                alert("아이디 중복 여부를 확인해주세요");
+                return false;
+            }
+        }
+        </script>
+        <script>
+        function findAddr() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    var roadAddr = data.roadAddress;
+                    var jibunAddr = data.jibunAddress;
+                    document.getElementById("postcode").value = data.zonecode;
+                    if(roadAddr !== '') {
+                        document.getElementById("address1").value = roadAddr;				
+                    } else if(jibunAddr !== ''){
+                        document.getElementById("address1").value = jibunAddr;
+                    }
+                    document.getElementById("address2").focus();
+                }
+            }).open();
+        }
+        </script>
+        <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    </div>
+    </section>
+    
+</body>
+
+        
+<footer class="ft">
+    <div class="ft_wrap">
+        
+        <div class="mid_box">
+            <nav class="fnb">
+                <div class="ft_logo"><img src="./img/logo/img_footer_logo.png" width="40" height:auto alt="lotte"></div><br><br><br>
+                <a class="a" href="https://www.lotte.co.kr/privacy/agree.do">개인정보처리방침 </a>
+                <a class="a" href="https://www.lotte.co.kr/cscenter/qna.do">CS CENTER </a>
+                <a class="a" href="https://www.lotte.co.kr/cmmn/siteMap.do">SITEMAP</a><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/lotte"><img src="./img/logo/btn_facebook.png"  width="7" height: auto alt="facebook" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://blog.lotte.co.kr/"><img src="./img/logo/btn_blog.png"  width="9" height: auto alt="blog" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.youtube.com/user/LOTTELIVE"><img src="./img/logo/btn_youtube.png"  width="15" height: auto alt="youtube" class="pic"></a>
+                <p class="copyright">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 1996-2017 LOTTE. All Rights reserved.</p>
+            </nav>
+        </div>
+</footer>
+    
+
+</html>

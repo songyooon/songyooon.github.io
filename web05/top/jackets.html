@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOW CLASSIC</title>
+   <!-- 메타포 -->
+   <meta name="description" content="서울의 모던과 유니크함을 담은 디자이너 브랜드 로우클래식 온라인 스토어입니다.">
+   <meta name="keywords" content="LOW CLASSIC, 로우클래식, 로클, 이명신, 디자이너 브랜드">
+   <!-- 오픈그래프 -->
+   <meta property="og:site_name" content="LOW CLASSIC">
+   <meta property="og:title" content="LOW CLASSIC">
+   <meta property="og:url" content="http://lowclassic.com">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="서울의 모던과 유니크함을 담은 디자이너 브랜드 로우클래식 온라인 스토어입니다.">
+   <meta property="og:image" content="./img/logo/logo.svg"> 
+   <meta property="og:image:width" content="800">
+   <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+    /* header.css */
+
+    ::selection {
+		background-color: rgb(103, 83, 50);
+		color: rgb(255, 255, 255); }
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+    a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    .logo {padding-top: 17px; padding-left: 250px;}
+    .buttons {padding-left: 650px;}
+    .navbar {padding-top: 25px;}
+
+    .ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
+.ft_wrap:after { content:""; display:block; clear:both; }
+    .ft_logo { float:left; width: 150px; }
+    .left { float:left; width: 460px; padding-left: 50px; }
+    .right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+    .right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+    .fnb { clear:both; }
+    .fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
+    .fnb a.dpc { color:rgb(0, 0, 0); }
+    .addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
+    font-size:12px; line-height: 2; }
+    .copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px; }
+    .sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
+    height: 40px; line-height: 44px; text-align:center; width: 140px; }
+    #sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
+    #sel option { color:rgb(0, 0, 0); }
+
+.to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+background-color:rgba(0, 0, 0, 0.268); color:#fff; display:block; width: 60px;
+height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+.to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
+.to_top.on { visibility: visible; }
+
+
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    
+    .content:target { display:block; }
+
+    .pic_lst { clear:both; width: 100%; }
+    .pic_lst li { width: 21%; float:left; margin-right: 5%; margin-bottom: 140px;
+    position:relative; }
+    .pic_lst li a { display:block; position:relative; }
+    .pic_lst li a:hover {background-color: rgb(255, 255, 255); opacity: 0.99; transition-duration:0.65s;}
+    .pic_lst li a .pic_fr { width: 100%; height:250px; overflow:hidden; background-color:transparent;  }
+    .pic_lst li a img { display:block; width: 250px; height:auto; }
+    .pic_lst li:nth-child(4n) { margin-right: 0; }
+    .pic_tit { line-height:3; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222; text-align: center;}
+    .pic_com, .pic_info { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:rgb(73, 73, 73);  text-align: center;}
+    .sale_price { font-size:16px; font-weight: bold; color:rgb(160, 30, 30); }
+    .origin_price { text-decoration: line-through; }
+    .pic_hd { position:absolute; top:0; left: 0; z-index:10; 
+    width: 100%; height:32px; opacity:0.8;}
+    .ht_ico { display:block; float:left; width:100px; line-height: 32px; height: 32px; padding-left: 10px; padding-top: 10px; color:#333; }
+    .best:before { content:"BEST"; }
+    .new:before { content:"NEW"; }
+    .hit:before { content:"HIT"; }
+    .starating { display:block; float:right; width: 20px; height: 20px; margin-top: 10px; margin-right: 10px; background-image:url("./img/icon/emptyheart.png"); background-repeat: no-repeat; background-size:100% 100%; }
+    .starating.on { background-image:url("./img/icon/redheart.png");  }
+
+    .vegan {
+        width: calc(1em / 0.7);
+        height: calc(1em / 0.7);
+    }
+    /* 아래는 위에서 설정한 내용 */
+    .vegan {
+        border-radius: 40px;
+ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+ 
+        font-size: 11px;
+        color: rgb(108, 201, 72);
+        border: 2px solid rgb(108, 201, 72);
+
+        width:35px;
+         background-color:transparent;
+         line-height: 0px;
+         text-align:center;
+         padding: 3px;
+    }
+    /* 기본 스타일: 래퍼 */
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0px;
+        max-width: 350px;
+    }
+
+    .home { color:#333; }
+
+    </style>
+    <link rel="stylesheet" href="./css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+
+<div class="wrap">
+    <header class="hd">
+        <div id="nav-group">
+            <div class="container"> 
+                <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+                  <div class="navbar-brand">
+                    <a href="../main.html" class="logo"><img src="../img/logo/logo.svg" width="200" alt="로고"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                    </a>
+                  </div>
+                
+                  <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start" id="gnb">
+                        <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                        
+        
+                           <div href="./new.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  new
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../new/22fw.html">
+                                   22 f/w
+                                </a>
+                              <a class="navbar-item" href="../new/rusuho.html">
+                                rusuho
+                             </a>
+                             </div>
+                        </div>     
+                        
+                        <div href="./top.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  top
+                            </a>
+                            <div class="navbar-dropdown single">
+                                 <a class="navbar-item" href="../top/jackets.html">
+                                    jackets
+                                 </a>
+                               <a class="navbar-item" href="../top/knit.html">
+                                knit
+                              </a>
+                            </div> 
+                        </div>
+                        
+                        <div href="./bottom.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                  bottom
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../bottom/pants.html">
+                                   pants
+                                </a>
+                              <a class="navbar-item" href="../bottom/denim.html">
+                               denim
+                             </a>
+                            </div>
+                        </div>
+    
+                        
+                        <div href="./about.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                about
+                            </a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="../about/lowclassic.html">
+                                 low classic
+                               </a>
+                               <a class="navbar-item" href="../about/contact.html">
+                                 contact
+                               </a>
+                            </div>
+                        </div>
+                            <div class="navbar-dropdown cate" id="cate04"></div>
+                        
+                        <div href="./lowclassic.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                            <a class="navbar-link is-arrowless">
+                                low classic
+                            </a>
+                            <div class="navbar-dropdown single">
+                               <a class="navbar-item" href="../lowclassic/collection.html">
+                                collection
+                              </a>
+                              <a class="navbar-item" href="../lowclassic/lookbook.html">
+                                lookbook
+                              </a>
+                            </div> 
+                        </div>
+                        <div class="navbar-dropdown cate" id="cate05"></div>
+                            
+                    </div>
+                    
+                    <div class="navbar-end" id="tnb">
+                      <div class="navbar-item">
+                          
+                    
+                     <div class="buttons">
+                       <a href="../member/join.html" class="button is-white is-small  is-rounded">
+                         JOIN
+                       </a>
+                       <a href="../member/login.html" class="button is-white is-small  is-rounded">
+                         LOGIN
+                       </a>
+                         
+                     </div>
+                    
+                  </div>
+                </div>
+                  </div>
+                </nav>
+            <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url:"/web03/MenuLoadCtrl.html",
+                    type:"POST",
+                    enctype:"UTF-8",
+                    datatype:"json",
+                    processData:false,
+                    contentType:false, 
+                    cache:false,
+                    success:function(data){
+                        $(".navbar-dropdown.cate").empty();
+                        var trans = $.parseJSON(data);
+                        $.each(trans, function(key, value){
+                            if(key=="data"){
+                                for(var i=0;i<value.length;i++){
+                                    if(value[i].cate=="A"){
+                                        $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="B"){
+                                        $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="C"){
+                                        $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="D"){
+                                        $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="E"){
+                                        $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="F"){
+                                        $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="G"){
+                                        $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    }
+                                }
+                            }
+                        });
+                        
+                    }
+                });
+            });
+            </script>
+            </div>
+        </div>
+        </div>
+    </header>
+
+<body>
+
+    <div class="content" id="page1">
+        <section class="page">
+            <div class="page_wrap">
+                <div class="con_wrap">
+                    <br><br><br><br><br>
+                    <ul class="pic_lst" style="list-style: none;">
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/182766176265dc1f399994acf358488e.jpg" alt="pic1"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/991979ce2d8497a7ffd74284addceb63.jpg" alt="pic2"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/5e5cf8515d8dd0b71c42a5e16894e594.jpg" alt="pic3"></a></div>
+
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/5bfeb4fd1de7a8ce1c888a98cd5df293.jpg" alt="pic4"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/79680ef4362aff3656f338864e2d3a96.jpg" alt="pic5"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/ab762338cf5b7c144355ecaf3382d8de.jpg" alt="pic6"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/0e4739610270d39af4a9e80710a0037a.jpg" alt="pic7"></a></div>
+                        </li>
+                        <li>
+                                <div class="pic_fr"><a href="../top/jackets.html"><img src="../img/top/jackets/025b8e73b4f39667762418966daa469d.jpg" alt="pic8"></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $(".starating").click(function(){
+            if($(this).hasClass("on")){
+                $(this).removeClass("on");
+            } else {
+                $(this).addClass("on");
+            }
+        });
+    });    
+    </script>
+</div>
+
+    <script>
+    var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+
+</body>
+
+ <footer class="ft2">
+    <div class="ft_wrap">
+        <div class="left">
+           <p class="copyright"><br></p>
+            <p class="addr">
+               LOW CLASSIC | REPRESENTATIVE 이명신<br>
+               BUSINESS NUMBER L. 847-87-01336<br>
+               ONLINE BUSINESS L. 2019-서울강남-03844
+            </p>
+            <p class="copyright">© LOW CLASSIC.</p>
+        </div>
+        <div class="right1">
+           <p class="copyright"></p>
+           <p class="addr">
+               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+               T. 070-7534-5004&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INFO@LOWCLASSIC.COM  
+           </p>
+       </div>
+
+        <script>
+        function sel_link(sel){
+            location.href = sel.value;
+        }
+        </script>
+    </div>
+</footer>
+</div>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+
+</html>

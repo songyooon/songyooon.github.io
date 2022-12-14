@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSH KOREA</title>
+   <!-- 메타포 -->
+   <meta name="description" content="세상을 비트는 욕심쟁이 스무살, 남들과는 다르게 옳다고 생각하는것을 믿고 세상을 비틀어온 러쉬 코리아의 20주년 쇼케이스.">
+   <meta name="keywords" content="LUSH KOREA, LUSH, 러쉬코리아, 러쉬, 더티스프레이, 러쉬 더티, 대디오, 러쉬 대디오, 배쓰밤, 샴푸바, 마스크팩, 샤워젤, 바디워시, 목욕용품">
+   <!-- 오픈그래프 -->
+   <meta property="og:site_name" content="LUSH KOREA">
+   <meta property="og:title" content="LUSH KOREA">
+   <meta property="og:url" content="https://www.lush.co.kr/">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="세상을 비트는 욕심쟁이 스무살, 남들과는 다르게 옳다고 생각하는것을 믿고 세상을 비틀어온 러쉬 코리아의 20주년 쇼케이스.">
+   <meta property="og:image" content="./img/logo/lush_transparent.png"> 
+   <meta property="og:image:width" content="800">
+   <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <style>
+    /* header.css */
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    .content { display:none; }
+    .content:target { display:block; }
+
+    .pic_lst { clear:both; width: 100%; }
+    .pic_lst li { width: 30%; float:left; margin-right: 5%; margin-bottom: 60px;
+    position:relative; }
+    .pic_lst li a { display:block; position:relative; }
+    .pic_lst li a .pic_fr { width: 100%; height:auto; overflow:hidden; background-color:transparent;  }
+    .pic_lst li a img { display:block; width: 100%; height: auto; }
+    .pic_lst li:nth-child(3n) { margin-right: 0; }
+    .pic_tit { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222; margin-top: 15px;text-align: center; font-size: 16px; font-weight: 900;}
+    .pic_com, .pic_info { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    .pic_hd { position:absolute; top:0; left: 0; z-index:10; 
+    width: 100%; height:32px; opacity:0.8; text-shadow:2px 2px 0px #fff, 1px 1px 0px #fff;}
+
+    .page_title { padding-top: 1em; }
+    .home { color:#333; }
+    .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+    background-color:rgba(153, 0, 255, 0.432); color:#fff; display:block; width: 60px;
+    height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+    .to_top:hover { background-color: rgba(51, 255, 0, 0.541); }
+    .to_top.on { visibility: visible; }
+
+    </style>
+    <link rel="stylesheet" href="./css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="./img/logo/lush_transparent.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="https://www.lush.co.kr/service/introduction" class="dp1">러쉬소개</a>
+                        <ul class="sub">
+                            <li><a href="brand.html#page1">러쉬역사</a></li>
+                            <li><a href="brand.html#page2">이념과가치</a></li>
+                            <li><a href="brand.html#page3">브랜드정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="https://www.lush.co.kr/categories/index/113" class="dp1">제품</a>
+                        <ul class="sub">
+                            <li><a href="product.html#page1">베스트</a></li>
+                            <li><a href="product.html#page2">신제품</a></li>
+                            <li><a href="product.html#page3">배쓰</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="https://www.lush.co.kr/board/shop" class="dp1">오프라인</a>
+                        <ul class="sub">
+                            <li><a href="offline.html#page1">매장안내</a></li>
+                            <li><a href="offline.html#page2">스파</a></li>
+                            <li><a href="offline.html#page3">20주년 쇼케이스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="https://www.lush.co.kr/event/list" class="dp1">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="community.html#page1">공지사항</a></li>
+                            <li><a href="community.html#page2">이벤트</a></li>
+                            <li><a href="community.html#page3">러쉬타임즈</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="https://www.lush.co.kr/mypage/faq" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="service.html#page1">FAQ</a></li>
+                            <li><a href="service.html#page2">1:1문의</a></li>
+                            <li><a href="service.html#page3">상담전화/상담톡</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content" id="page1">
+        <figure class="vs">
+            <img src="./img/water.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel13" id="sel13" class="sel">
+                    <option>오프라인</option>
+                    <option value="brand.html#page1">러쉬소개</option>
+                    <option value="product.html#page1">제품</option>
+                    <option value="cummunity.html#page1">커뮤니티</option>
+                    <option value="service.html#page1">고객센터</option>
+                </select> &gt; 
+                <select name="sel14" id="sel14" class="sel">
+                    <option>매장안내</option>
+                    <option value="offline.html#page2">스파</option>
+                    <option value="offline.html#page3">20주년 쇼케이스</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">매장안내</h2>
+
+            </div>
+        </section>
+    </div>
+
+    <section class="page">
+        <div class="page_wrap">
+            <h2 class="page_title">매장 소개</h2><br>
+            <div class="con_wrap">
+                <ul class="pic_lst">
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offline.html#page1">
+                            <div class="pic_fr"><img src="./img//offline/shop/hyndaiangubon.jpg" alt="pic1"></div>
+                            <h3 class="pic_tit">현대백화점 압구정 본점</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="content" id="page2">
+        <figure class="vs">
+            <img src="./img/water.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel15" id="sel15" class="sel">
+                    <option>오프라인</option>
+                    <option value="brand.html#page1">러쉬소개</option>
+                    <option value="product.html#page1">제품</option>
+                    <option value="cummunity.html#page1">커뮤니티</option>
+                    <option value="service.html#page1">고객센터</option>
+                </select> &gt; 
+                <select name="sel16" id="sel16" class="sel">
+                    <option selected>스파</option>
+                    <option value="offline.html#page1">매장안내</option>
+                    <option value="offline.html#page3">20주년 쇼케이스</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">스파</h2>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div class="content" id="page3">
+        <figure class="vs">
+            <img src="./img/water.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel17" id="sel17" class="sel">
+                    <option>오프라인</option>
+                    <option value="brand.html#page1">러쉬소개</option>
+                    <option value="product.html#page1">제품</option>
+                    <option value="cummunity.html#page1">커뮤니티</option>
+                    <option value="service.html#page1">고객센터</option>
+                </select> &gt; 
+                <select name="sel18" id="sel18" class="sel">
+                    <option selected>20주년 쇼케이스</option>
+                    <option value="offline.html#page1">매장안내</option>
+                    <option value="offline.html#page2">스파</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">20주년 쇼케이스</h2>
+            </div>
+        </section>
+    </div>
+    <script>
+    var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+ <footer class="ft">
+    <div class="ft_wrap">
+        <div class="ft_logo"><img src="./img//logo/lush_transparent.png" width="100" height:auto alt="하단로고"></div>
+        <div class="mid_box">
+            <nav class="fnb">
+                <a href="member01.html">개인정보처리방침</a> 
+                <a href="member02.html">영상정보관리지침</a>
+                <a href="member03.html">이용약관</a>
+            </nav>
+            <p class="addr">
+                LUSH KOREA | 대표이사 우미령<br>
+                서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사 러쉬코리아<br>
+                사업자등록번호:201-81-77964 | 통신판매업신고번호: 2022-서울강남-02857<br> 
+            </p>
+            <p class="copyright">COPYRIGHT ⓒ LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sel_box">
+            <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                <option value="">LUSH SNS</option>
+                <option value="https://twitter.com/LUSHKOREA">TWITTER</option>
+                <option value="https://www.instagram.com/lushkorea/">INSTAGRAM</option> 
+                <option value="https://www.youtube.com/user/LUSHKOREA1">YOUTUBE</option>
+                <option value="https://pf.kakao.com/_VEbUM">KAKAOTALK CHANNEL</option>
+                <option value="https://m.post.naver.com/lushkr1">NAVER POST</option>
+            </select>
+        </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+</body>
+</html>

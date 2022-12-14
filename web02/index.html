@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>닥터독-가족이지만 말 못하는 그들을 위해</title>
+   <!-- 메타포 -->
+   <meta name="description" content="닥터독은 육류·다양한 과채류 및 제약회사에서 사용중인 기능성 원료를 결합한 최상의 영양설계 강아지사료입니다.">
+   <meta name="keywords" content="닥터독, Drdog, 강아지사료, 강아지간식, 강아지영양제, 강아지화식">
+   <!-- 오픈그래프 -->
+   <meta property="og:site_name" content="닥터독-가족이지만 말 못하는 그들을 위해">
+   <meta property="og:title" content="닥터독-가족이지만 말 못하는 그들을 위해">
+   <meta property="og:url" content="https://okdoctordog.com/index.html">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="닥터독은 육류·다양한 과채류 및 제약회사에서 사용중인 기능성 원료를 결합한 최상의 영양설계 강아지사료입니다.">
+   <meta property="og:image" content="./img/logo/header_logo_mini.png"> 
+   <meta property="og:image:width" content="800">
+   <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+
+   <style>
+    /* header.css */
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+    a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    .content { clear:both; width: 100%;}
+    .vs { clear:both; width: 100%; height:100vh; overflow:hidden;}
+    .page { clear:both; width: 100%;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    .page_tit { text-align: left; font-size:45px; padding-left: 330px; padding-top: 1.2em; padding-bottom: 0.8em;  font-weight: 750; }
+    .lst { clear:both; width: 1200px;}
+    .lst:after { content:""; display:block; clear:both; }
+    .lst li { margin-bottom: 40px;}
+    .lst li.left { float:left; width: 816px; height: 459px;}
+    .lst li.right { float:right; width: 350px; height: 459px;}
+    .cate_tit { color: #000; font-size: 20px; padding-bottom: 0.5em;}
+    .cate_com { color:#000; font-size: 14px;}
+
+    .d-flex {margin-left:880px; }
+
+    .main_review_tit {text-align: left; padding-left: 330px; }
+    .main_review_tit2 {text-align: left; padding-left: 330px; color:rgb(175, 175, 175) }
+
+    .pro_lst { clear:both; width: 100%; padding-left: 80px; }
+    .pro_lst li { width: 21%; float:left; margin-right: 5%; margin-bottom: 140px;
+    position:relative; }
+    .pro_lst li a { display:block; position:relative; }
+    .pro_lst li a:hover {background-color: rgba(0, 0, 0, 0.089); opacity: 0.99; transition-duration:0.65s;}
+    .pro_lst li a .pro_fr { width: 100%; height:auto; overflow:hidden; background-color:transparent;  }
+    .pro_lst li a img { display:block; width: 250px; height:auto; }
+    .pro_lst li:nth-child(4n) { margin-right: 0; }
+    .pro_tit { line-height:3; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222; text-align: center;}
+    .pro_com, .pro_info { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:rgb(73, 73, 73);  text-align: left;}
+    .sale_price { font-size:16px; font-weight: bold; }
+    .origin_price { text-decoration: line-through; color:rgb(160, 160, 160); }
+    .pro_hd { position:absolute; top:0; left: 0; z-index:10; 
+    width: 100%; height:32px; opacity:0.8;}
+
+    .pic_lst { clear: both; width: 100%; padding-bottom: 80px;}
+    .pic_lst:after { content: ""; display: block; clear: both;}
+    .pic_lst li { float: left; margin-bottom: 40px;}
+    .pic_lst li a { display: block;  width: 540px; margin-right: 40px; overflow: hidden; height:auto;}
+    .pic_lst li a img {display: block; position:relative; width:590px; height:auto; }
+    .pic_lst li a:hover img { margin-left: 0; background-color: rgba(255, 255, 255, 0.424); opacity: 0.99; transition-duration:0.65s;}
+    .pic_lst li a .hv_box { width: 540px; height: auto; color:#fff; opacity:0; position:absolute; bottom: 110px; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .pic_lst li a:hover .hv_box { opacity:1; }
+    .pic_tit { position:absolute; top:30px; left: 30px; font-size: 40px; font-weight: 700; }
+
+
+
+    .con_wrap { width: 100%; }
+
+    .seven { padding-left: 400px; }
+
+    .box1 { width: 400px; height: 800px;}
+    .box2 { width: 400px; height: 200px;}
+    .box3 { width: 400px; height: 200px;}
+
+
+     	/* 브라우저 마진과 패딩 리셋 */
+	* {margin:0;padding:0;}
+
+    /* INPUT 가리기 */
+    .section [id*="slide"] {display:none;}
+
+    /* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+    .section .slidewrap {max-width:2000px;margin:0 auto;overflow:hidden;position:relative;}
+    .section .slidelist {white-space:nowrap;font-size:0;}
+    .section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .9s;}
+    .section .slidelist > li > a {display:block;position:relative;}
+
+    /* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+    .section .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
+    .section .slide-control label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+    .section .slide-control .left {left:0;background:url('./img/icon/left.png') center center / 22% no-repeat;}
+    .section .slide-control .right {right:170px;background:url('./img/icon/right.png') center center / 100% no-repeat;}
+    .section .slide-control [class*="control"] {display:none;}
+
+    /* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+    .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .section [id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .section [id="slide05"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+    .section [id="slide06"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-500%);}
+
+    /*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+    .section [id="slide01"]:checked ~ .slidewrap .control01 {display:block;}
+    .section [id="slide02"]:checked ~ .slidewrap .control02 {display:block;}
+    .section [id="slide03"]:checked ~ .slidewrap .control03 {display:block;}   
+    .section [id="slide04"]:checked ~ .slidewrap .control04 {display:block;}
+    .section [id="slide05"]:checked ~ .slidewrap .control05 {display:block;}
+    .section [id="slide06"]:checked ~ .slidewrap .control06 {display:block;} 
+
+
+    /* 페이징 */
+	.slide-pagelist {text-align:center;padding:20px;}
+	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+	.slide-pagelist > li > label {display:block;padding:7px 13px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+    .section input[id="slide04"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(4) > label {background:#999;}
+	.section input[id="slide05"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(5) > label {background:#999;}
+	.section input[id="slide06"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(6) > label {background:#999;}
+
+    
+    .pro_ra { display:none; }
+    .ban1 { clear:both; width: 100%; height:auto; margin:0 auto; overflow-x:hidden; }
+    .ban_img_fr { clear:both; width:9000px; margin-left: 0; transition-duration:0.6s; }
+    #pro_ra1:checked ~ .ban_img_fr { margin-left: 0; }
+    #pro_ra2:checked ~ .ban_img_fr { margin-left:-1200px; }
+    #pro_ra3:checked ~ .ban_img_fr { margin-left:-2400px; }
+    #pro_ra4:checked ~ .ban_img_fr { margin-left: -3600px; }
+    #pro_ra5:checked ~ .ban_img_fr { margin-left:-4800px; }
+    #pro_ra6:checked ~ .ban_img_fr { margin-left:-6000px; }
+    .ban_img_fr:after { content:""; display:block; clear:both; }
+    .ban_img_fr li { float:left; width: 1200px; margin: 0; }
+    .ban_img_fr li img { display:block; width: 100%; height: auto; margin: 0; }
+    .btn_fr { clear:both; }
+    .btn_group.left { float:left; }
+    .btn_group.left label { display:block; width: 12px; height: 12px; background-color:transparent; border:2px solid
+    rgb(141, 141, 141); border-radius: 50%; text-indent:-9999px; margin: 8px; cursor:pointer; }
+    #pro_ra1:checked ~ .btn_fr .btn_group.left li.item1 label { background-color:rgb(141, 141, 141); }
+    #pro_ra2:checked ~ .btn_fr .btn_group.left li.item2 label { background-color:rgb(141, 141, 141); }
+    #pro_ra3:checked ~ .btn_fr .btn_group.left li.item3 label { background-color:rgb(141, 141, 141); }
+    #pro_ra4:checked ~ .btn_fr .btn_group.left li.item4 label { background-color:rgb(141, 141, 141); }
+    #pro_ra5:checked ~ .btn_fr .btn_group.left li.item5 label { background-color:rgb(141, 141, 141); }
+    #pro_ra6:checked ~ .btn_fr .btn_group.left li.item6 label { background-color:rgb(141, 141, 141); }
+    .btn_group.right { float:right; }
+    .btn_group li { float:left; margin: 8px;}
+    .btn_group.right li a { display:block; width: 32px; height: 32px; background-repeat: no-repeat; background-size:32px
+    32px; }
+
+    /* footer */
+
+
+.ft2 { clear:both; width: 100%; height: 400px; background-color: rgb(44, 44, 44); padding-bottom: 50px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
+.ft_wrap:after { content:""; display:block; clear:both; }
+.ft_logo { float:left; width: 150px; }
+.left { float:left; width: 460px; padding-left: 50px; }
+.right1 { float:left; width: 400px; padding-left: 160px; }
+.right2 { float:left; width: 340px; padding-left: 160px; }
+.fnb { clear:both; }
+.fnb a { color:rgb(255, 255, 255); font-size:14px; padding: 24px; }
+.fnb a.dpc { color:#fff; }
+.addr { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 20px; 
+font-size:12px; line-height: 2; }
+.copyright { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 10px; }
+.sel_box { float:right; border-bottom:1px solid #fff;
+height: 40px; line-height: 44px; text-align:center; width: 140px; }
+#sel { border:none; outline: none; background-color: transparent; color:rgb(255, 255, 255); }
+#sel option { color:rgb(255, 255, 255); }
+
+.to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+background-color:rgba(252, 120, 44); color:#fff; display:block; width: 60px;
+height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+.to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
+.to_top.on { visibility: visible; }
+
+</style>
+    <link rel="stylesheet" href="./css/footer.css">
+</style>
+
+<script>
+$(document).ready(function(){
+    $(".to_top").attr("href", location.href);
+    $(window).scroll(function(){
+        var ht = $(window).height();
+        var tp = $(this).scrollTop();
+        if(tp>=300){
+            $(".to_top").addClass("on");
+            $(".to_top").attr("href", location.href);
+        } else {
+            $(".to_top").removeClass("on");
+            $(".to_top").attr("href", location.href);
+        }
+    });
+});    
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="./css/common.css">
+<style>
+.in_container { clear:both; width:1400px; margin:0 auto; }
+.in_container:after { content:""; display:block; clear:both; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+ <header class="hd">
+    <div class="hd_wrap">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/logo/header_logo_mini.png" alt="DrDOG" width="110" height:auto>
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="brand.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                            브랜드
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="brand.html#page1">브랜드스토리</a>
+                          <a class="dropdown-item" href="brand.html#page2">Give & Love</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="product.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                            제품
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="product.html#page1">사료</a>
+                          <a class="dropdown-item" href="product.html#page2">화식</a>
+                          <a class="dropdown-item" href="product.html#page3">간식</a>
+                          
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="community.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                            커뮤니티
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="community.html">이벤트</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="service.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                            고객지원
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="service.html#page1">공지사항</a>
+                            <a class="dropdown-item" href="service.html#page2">고객문의</a>
+                            <a class="dropdown-item" href="service.html#page3">자주 묻는 질문</a>
+                        </div>
+                      </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">SEARCH</button>
+                </form>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                     
+
+                <a href="login.html"><img src="./img/icon/ico_user.png"  width="25" height: auto alt="로그인" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="order.html"><img src="./img/icon/ico_order.png"  width="28" height: auto alt="주문내역" class="pic"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="cart.html"><img src="./img/icon/ico_basket.png"  width="25" height: auto alt="장바구니" class="pic"></a>
+              </div>
+            </div>
+          </nav>
+    </div>
+</header>
+
+
+<div class="content">
+    <figure class="vs">
+<section class="page">
+        <div class="con_wrap">
+
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <input type="radio" name="slide" id="slide04">
+                <input type="radio" name="slide" id="slide05">
+                <input type="radio" name="slide" id="slide06">
+                <div class="slidewrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_1.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_2.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_3.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_4.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_5.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/main/main1_6.png">
+                            </a>
+                        </li>
+                    </ul>
+            
+                    <div class="slide-control">
+                        <div class="control01">
+                            <label for="slide06" class="left"></label>
+                            <label for="slide02" class="right"></label>
+                        </div>
+                        <div class="control02">
+                            <label for="slide01" class="left"></label>
+                            <label for="slide03" class="right"></label>
+                        </div>
+                        <div class="control03">
+                            <label for="slide02" class="left"></label>
+                            <label for="slide04" class="right"></label>
+                        </div>
+                        <div class="control04">
+                            <label for="slide03" class="left"></label>
+                            <label for="slide05" class="right"></label>
+                        </div>
+                        <div class="control05">
+                            <label for="slide04" class="left"></label>
+                            <label for="slide06" class="right"></label>
+                        </div>
+                        <div class="control06">
+                            <label for="slide05" class="left"></label>
+                            <label for="slide01" class="right"></label>
+                        </div>
+                    </div>
+
+                    		<!-- 페이징 -->
+		            <ul class="slide-pagelist">
+			        <li><label for="slide01"></label></li>
+			        <li><label for="slide02"></label></li>
+			        <li><label for="slide03"></label></li>
+                    <li><label for="slide04"></label></li>
+			        <li><label for="slide05"></label></li>
+			        <li><label for="slide06"></label></li>
+		            </ul>
+
+                </div>
+            </div>
+
+            <img src="./img/main/main3_1.png" width="50%" height:auto alt="배너사진1"><img src="./img/main/main3_2.png" width="50%" height:auto alt="배너사진2">
+            </div>
+</section>
+</figure>
+</div>
+
+<br><br>
+
+     <section class="page" id="page2">
+         <div class="page_wrap">
+             <ul class="pic_lst" style="list-style: none;">
+                 <li>
+                     <a href="product.html">
+                         <img src="./img/main/main2_1.jpg"  width="800" height:auto alt="사료" class="pic"> 
+                         <div class="hv_box">
+                             <h3 class="pic_tit">사료</h3>
+                         </div>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="product.html">
+                         <img src="./img/main/main2_2.jpg"  width="800" height:auto alt="화식" class="pic">
+                         <div class="hv_box">
+                             <h3 class="pic_tit">화식</h3>
+                         </div>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="product.html">
+                         <img src="./img/main/main2_3.jpg"  width="800" height:auto alt="간식" class="pic"> 
+                         <div class="hv_box">
+                             <h3 class="pic_tit">간식</h3>
+                         </div>
+                     </a>
+                 </li>   
+                 <li>
+                    <a href="product.html">
+                        <img src="./img/main/main2_4.jpg"  width="400" height:auto alt="영양제" class="pic"> 
+                        <div class="hv_box">
+                            <h3 class="pic_tit">영양제</h3>
+                        </div>
+                    </a>
+                </li> 
+                <li>
+                    <a href="product.html">
+                        <img src="./img/main/main2_5.jpg"  width="400" height:auto alt="용품" class="pic"> 
+                        <div class="hv_box">
+                            <h3 class="pic_tit">용품</h3>
+                        </div>
+                    </a>
+                </li>   
+             </ul>
+         </div>
+     </section>
+
+     <img src="./img/main/main3_3.png" width="100%" height:auto alt="배너사진3"><br>
+
+     <img src="./img/main/main3_4.png" width="80%" height:auto class="seven" alt="배너사진4">
+
+     <h2 class="page_tit">신나는 가을<br>즐거운 산책을 위한 준비!</h2>
+
+     <ul class="pro_lst" style="list-style: none;">
+        <li>
+            <a href="#">
+                <div class="pro_fr"><img src="./img/main/main4_1.png" alt="pic1"></div>
+                <p class="pro_com">아웃도어 케어</p>
+                <p class="pro_info"><strong>16,000</strong>&nbsp;&nbsp;<del>19,000</del></p>
+                <p class="origin_price">19,000</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="pro_fr"><img src="./img/main/main4_2.png" alt="pic2"></div>
+                <p class="pro_com">비건 트릿간식-후르츠</p>
+                <p class="pro_info"><strong>7,000</strong>&nbsp;&nbsp;<del>8,500</del></p>
+                <p class="origin_price">8,500</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="pro_fr"><img src="./img/main/main4_3.png" alt="pic3"></div>
+                <p class="pro_com">비건 트릿간식-베지</p>
+                <p class="pro_info"><strong>7,000</strong>&nbsp;&nbsp;<del>8,500</del></p>
+                <p class="origin_price">8,500</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="pro_fr"><img src="./img/main/main4_4.png" alt="pic4"></div>
+                <p class="pro_com">젤리츄 연어</p>
+                <p class="pro_info"><strong>9,000</strong>&nbsp;&nbsp;<del>11,000</del></p>
+                <p class="origin_price">11,000</p>
+            </a>
+        </li>
+        </ul>
+
+
+
+     <img src="./img/main/main3_5.png" width="100%" height:auto alt="배너사진5"><br>
+
+
+
+ </div>
+
+
+ <footer class="ft2">
+     <div class="ft_wrap">
+         <div class="left">
+            <p class="addr">이용안내 | 이용약관 | 개인정보처리방침 | 공지사항</p>
+            <p class="copyright">주식회사 일현코퍼레이션<br></p>
+             <p class="addr">
+                 04799 서울특별시 성동구 아차산로15길 52 (성수동2가) 삼환디지털벤처타워 902-1호 주식회사 일현코퍼레이션<br>
+                 이메일 : doctordog@ilhyun.co.kr<br>
+                 사업자번호 : 206-86-61496 | 통신판매신고번호 : 제 2012-서울성동-0364<br> 
+                 KG 이니시스 매매보호(에스크로)서비스 가입<br>
+                 대표이사 : 김형우 | 개인정보관리자 : 관리부<br>
+             </p>
+             <p class="copyright">© Ilhyun Corporation. all rights reserved.</p>
+         </div>
+         <div class="right1">
+            <p class="copyright">고객센터</p>
+            <p class="addr">
+                1544-0322<br>
+                평일 | 오전 10:30~오후 05:00<br>
+                점심시간 | 오전 11:30 ~ 오후 12:30<br> 
+                (주말 및 공휴일 휴무)<br> 
+            </p>
+            <p class="copyright">FAQ | 1:1문의 | 마케팅제휴문의</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ko-kr.facebook.com/okdoctordog/" target="_blank"><img src="./img/icon/ico_facebook.png"  width="25" height: auto alt="facebook" class="pic"></a>&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/doctordog_korea/?hl=ko" target="_blank"><img src="./img/icon/ico_instagram.png"  width="25" height: auto alt="instagram" class="pic"></a>&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCFOuQToD-Ces7c1CxMu5SRA" target="_blank"><img src="./img/icon/ico_youtube.png"  width="31" height: auto alt="youtube" class="pic"></a>
+        </div>
+        <div class="right2">
+            <p class="copyright">택배 배송 마감 안내</p>
+            <p class="addr">
+                평일 | 오후 2시 마감<br>
+                토요일 | 오후 1시 마감<br><br>
+                고객센터는 토요일 휴무입니다.<br> 
+            </p>
+            <p class="copyright">상온 제품 배송조회></p>
+            <p class="copyright">냉동 제품 배송조회></p>
+        </div>
+
+         <script>
+         function sel_link(sel){
+             location.href = sel.value;
+         }
+         </script>
+     </div>
+ </footer>
+</div> 
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+</body>
+</html>

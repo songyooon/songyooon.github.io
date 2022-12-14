@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSH KOREA</title>
+   <!-- 메타포 -->
+   <meta name="description" content="세상을 비트는 욕심쟁이 스무살, 남들과는 다르게 옳다고 생각하는것을 믿고 세상을 비틀어온 러쉬 코리아의 20주년 쇼케이스.">
+   <meta name="keywords" content="LUSH KOREA, LUSH, 러쉬코리아, 러쉬, 더티스프레이, 러쉬 더티, 대디오, 러쉬 대디오, 배쓰밤, 샴푸바, 마스크팩, 샤워젤, 바디워시, 목욕용품">
+   <!-- 오픈그래프 -->
+   <meta property="og:site_name" content="LUSH KOREA">
+   <meta property="og:title" content="LUSH KOREA">
+   <meta property="og:url" content="https://www.lush.co.kr/">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="세상을 비트는 욕심쟁이 스무살, 남들과는 다르게 옳다고 생각하는것을 믿고 세상을 비틀어온 러쉬 코리아의 20주년 쇼케이스.">
+   <meta property="og:image" content="./img/logo/lush_transparent.png"> 
+   <meta property="og:image:width" content="800">
+   <meta property="og:image:height" content="400">
+   <!-- 파비콘 -->
+   <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="theme-color" content="#ffffff">
+   <!-- 각 종 플러그인과 설정 파일 -->
+   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <!-- 구형 브라우저 html5태그 인식 -->
+   <script src="./js/html5shiv.js"></script>
+   <!-- 구형 브라우저에서 css animation 인식 -->
+   <script src="./js/prefixfree.min.js"></script>
+   <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+   <script src="./js/respond.min.js"></script>
+   <!-- jquery 플러그인 연결 -->
+   <script src="./js/jquery-1.11.1.js"></script>
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <style>
+    /* header.css */
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 1em; text-align: center; }
+    .home { color:#333; }
+
+    .frm { border:0 solid rgb(255, 255, 255); padding: 24px; width: 580px; margin:50px auto; }
+    .frm_tb { display:table; margin:40px auto;  }
+    .frm_tb tr { display:table-row; }
+    .frm_tb td, .frm_tb th { display:table-cell; }
+    .frm_tb th { width:150px; height: 48px;  }
+    .frm_tb td { width:300px; height: 48px; }
+
+    .in_dt { background-color:#fff; height:30px; line-height: 32px; width: 180px; 
+    color:rgb(0, 0, 0); font-size:14px; text-indent:0.5em; }
+    .in_btn { display:block; color: rgb(255, 255, 255); background-color:rgb(0, 0, 0); min-width:120px; height: 32px; 
+    line-height: 32px; border-radius:0; border-color:transparent; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
+    .in_btn:hover { background-color: greenyellow; color:rgb(0, 0, 0); }
+
+    .frm_tb { display:table; }
+    .frm_tb li { display:table-row; }
+    .frm_tb .td, .frm_tb .th, .frm_tb .td2 { display:table-cell; }
+    .frm_tb .th { width:200px; }
+    .frm_tb .td { width:200px; }
+    .frm_tb .td2 { width:400px; }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="./img/logo/lush_transparent.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="https://www.lush.co.kr/service/introduction" class="dp1">러쉬소개</a>
+                        <ul class="sub">
+                            <li><a href="brand.html#page1">러쉬역사</a></li>
+                            <li><a href="brand.html#page2">이념과가치</a></li>
+                            <li><a href="brand.html#page3">브랜드정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="https://www.lush.co.kr/categories/index/113" class="dp1">제품</a>
+                        <ul class="sub">
+                            <li><a href="product.html#page1">베스트</a></li>
+                            <li><a href="product.html#page2">신제품</a></li>
+                            <li><a href="product.html#page3">배쓰</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="https://www.lush.co.kr/board/shop" class="dp1">오프라인</a>
+                        <ul class="sub">
+                            <li><a href="offline.html#page1">매장안내</a></li>
+                            <li><a href="offline.html#page2">스파</a></li>
+                            <li><a href="offline.html#page3">20주년 쇼케이스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="https://www.lush.co.kr/event/list" class="dp1">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="community.html#page1">공지사항</a></li>
+                            <li><a href="community.html#page2">이벤트</a></li>
+                            <li><a href="community.html#page3">러쉬타임즈</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="https://www.lush.co.kr/mypage/faq" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="service.html#page1">FAQ</a></li>
+                            <li><a href="service.html#page2">1:1문의</a></li>
+                            <li><a href="service.html#page3">상담전화/상담톡</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <img src="./img/water.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <span class="sel">로그인</span>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">로그인</h2>
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="loginForm" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td>
+                                        <input type="text" id="id" name="id" class="in_dt" required autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="id">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" id="pw" name="pw" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="submit" class="in_btn">로그인</button>
+                                        <button type="reset" class="in_btn">취소</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/logo/lush_transparent.png" width="100" height:auto alt="하단로고"></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html">개인정보처리방침</a> 
+                    <a href="member02.html">영상정보관리지침</a>
+                    <a href="member03.html">이용약관</a>
+                </nav>
+                <p class="addr">
+                    LUSH KOREA | 대표이사 우미령<br>
+                    서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사 러쉬코리아<br>
+                    사업자등록번호:201-81-77964 | 통신판매업신고번호: 2022-서울강남-02857<br> 
+                </p>
+                <p class="copyright">COPYRIGHT ⓒ LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">LUSH SNS</option>
+                    <option value="https://twitter.com/LUSHKOREA">TWITTER</option>
+                    <option value="https://www.instagram.com/lushkorea/">INSTAGRAM</option> 
+                    <option value="https://www.youtube.com/user/LUSHKOREA1">YOUTUBE</option>
+                    <option value="https://pf.kakao.com/_VEbUM">KAKAOTALK CHANNEL</option>
+                    <option value="https://m.post.naver.com/lushkr1">NAVER POST</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+   </div>
+   </body>
+   </html>

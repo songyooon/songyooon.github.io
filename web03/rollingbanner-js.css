@@ -1,0 +1,97 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 배너 컨테이너 */
+.rollingbanner{
+    width: 100%;
+    height: 40px;
+    font-size: .875rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: -.075em;
+    background-color: rgb(147, 218, 133);
+}
+.rollingbanner a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.rollingbanner > .wrap{
+    position: relative;
+    width: 1180px;
+    height: 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.wrap::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(147, 218, 133,1) 0%, rgba(147, 218, 133,0.75) 51%, rgba(170,0,0,0) 100%);
+}
+.wrap::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(170,0,0,0) 0%, rgba(147, 218, 133,0.75) 51%, rgba(147, 218, 133,1) 100%);
+}
+
+/* 애니메이션하는 요소 */
+.roller{
+    position: absolute;
+    height: 100%;
+}
+.roller > ul{
+    margin: 0;
+    list-style: none;
+    padding: 9px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.roller > ul > li{
+    padding-right: 30px;
+}
+.roller > ul > li span{
+    padding-right: 3px;
+}
+.roller > ul > li .status {
+    position: relative;
+    padding-left: 20px;
+}
+.roller > ul > li .status.up::before{
+    position: absolute;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Arrow Forward</title><path fill="none" stroke="rgb(255,96,96)" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>');
+    transform: rotateZ(-45deg);
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    left: 0;
+}
+.roller > ul > li .status.down::before{
+    position: absolute;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Arrow Forward</title><path fill="none" stroke="rgb(96,96,255)" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>');
+    transform: rotateZ(45deg);
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    left: 0;
+}
