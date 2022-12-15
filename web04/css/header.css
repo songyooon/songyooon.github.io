@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 .hd { width: 100%; position: absolute; top: 0; left: 0; z-index:999; background-color: transparent; height: 80px; }
 .hd:hover { background-color: transparent; }
 .hd_wrap { width:1200px; margin:0 auto; }
