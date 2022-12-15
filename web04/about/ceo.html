@@ -33,7 +33,7 @@
    <!-- jquery 플러그인 연결 -->
    <script src="./js/jquery-1.11.1.js"></script>
    <script src="https://code.jquery.com/jquery-latest.js"></script>
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
    <link rel="stylesheet" href="../css/reset2.css">
    <link rel="stylesheet" href="../css/header.css">
    <link rel="stylesheet" href="../css/footer.css">
@@ -41,8 +41,8 @@
 
     /* header.css */
 
-    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
-    a:visited { color: #000; text-decoration:none !important}	
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}  
+    a:visited { color: #000; text-decoration:none !important} 
     a:active { color: rgb(0, 0, 0); text-decoration:none !important}
 
     .logo {width: 50px; padding-top: 10px; }
@@ -92,7 +92,6 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
 
 
 
-
 <!-- Hotjar Tracking Code for web04 -->
 <script>
   (function(h,o,t,j,a,r){
@@ -108,61 +107,171 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
   </head>
 
   
-  <div class="wrap">
-    <header class="hd">
-       <div class="hd_wrap">
-           <a href="./index.html" class="logo"><img src="./img/logo/img_symbol_logo.png" width="30" alt="로고"></a>
-           <nav class="tnb">
-               <a href="./member/login.html">로그인</a>
-               <a href="./member/join.html">회원가입</a>
-           </nav>
-           <nav class="gnb">
-               <ul>
-                   <li class="item1">
-                       <a href="./about/vision.html" class="dp1">About Lotte</a>
-                       <ul class="sub">
-                           <li><a href="./about/vision.html">비전</a></li>
-                           <li><a href="./about/values.html">핵심가치</a></li>
-                           <li><a href="./about/ceo.html">CEO</a></li>
-                       </ul>
-                   </li>
-                   <li class="item2">
-                       <a href="./esg/lotteesg.html" class="dp1">ESG</a>
-                       <ul class="sub">
-                           <li><a href="./esg/lotteesg.html">롯데 ESG</a></li>
-                           <li><a href="./esg/esggrade.html">ESG 평가</a></li>
-                           <li><a href="./esg/esgnews.html">ESG 뉴스</a></li>
-                       </ul>
-                   </li>
-                   <li class="item3">
-                       <a href="./IR/jibae.html" class="dp1">IR</a>
-                       <ul class="sub">
-                           <li><a href="./IR/jibae.html">지배구조</a></li>
-                           <li><a href="./IR/joojoo.html">주주정책</a></li>
-                           <li><a href="./IR/jaemoo.html">재무정보</a></li>
-                       </ul>
-                   </li>
-                   <li class="item4">
-                       <a href="./careers/injae.html" class="dp1">Careers</a>
-                       <ul class="sub">
-                           <li><a href="./careers/injae.html">인재상</a></li>
-                           <li><a href="./careers/chaeyong.html">채용전형</a></li>
-                           <li><a href="./careers/insa.html">인사제도</a></li>
-                       </ul>
-                   </li>
-                   <li class="item5">
-                       <a href="./cs/ask.html" class="dp1">CS center</a>
-                       <ul class="sub">
-                           <li><a href="./cs/ask.html">문의하기</a></li>
-                           <li><a href="./cs/way.html">오시는 길</a></li>
-                       </ul>
-                   </li>
-               </ul>
-           </nav>
-       </div>
-   </header>
-   </div>
+  <div id="nav-group">
+    <div class="container"> 
+        <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+          <div class="navbar-brand">
+            <a href="../index.html" class="logo"><img src="../img/logo/img_symbol_logo.png" width="40" alt="로고"></a>
+            
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start" id="gnb">
+                <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                
 
+                   <div href="../about/vision.html" class="navbar-item has-dropdown is-hoverable single">
+                    <a class="navbar-link is-arrowless">
+                      About Lotte
+                    </a>
+                    <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../about/vision.html">
+                               비전
+                         </a>
+                       <a class="navbar-item" href="../about/values.html">
+                        핵심가치
+                      </a>
+                      <a class="navbar-item" href="../about/ceo.html">
+                        CEO
+                      </a>
+                    </div> 
+                </div>     
+                
+                <div href="../esg/lotteesg.html" class="navbar-item has-dropdown is-hoverable single">
+                    <a class="navbar-link is-arrowless">
+                          ESG
+                    </a>
+                    <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../esg/lotteesg.html">
+                          롯데 ESG
+                         </a>
+                       <a class="navbar-item" href="../esg/esggrade.html">
+                        ESG 평가
+                      </a>
+                      <a class="navbar-item" href="../esg/esgnews.html">
+                        ESG 뉴스
+                      </a>
+                    </div> 
+                </div>
+                
+                <div href="../IR/jibae.html" class="navbar-item has-dropdown is-hoverable single">
+                    <a class="navbar-link is-arrowless">
+                          IR
+                    </a>
+                    <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../IR/jibae.html">
+                               지배구조
+                         </a>
+                       <a class="navbar-item" href="../IR/joojoo.html">
+                            주주정책
+                      </a>
+                      <a class="navbar-item" href="../IR/jaemoo.html">
+                        재무정보
+                  </a>
+                    </div> 
+                </div>
+
+                
+                <div href="../careers/injae.html" class="navbar-item has-dropdown is-hoverable single">
+                    <a class="navbar-link is-arrowless">
+                          Careers
+                    </a>
+                    <div class="navbar-dropdown single">
+                         <a class="navbar-item" href="../careers/injae.html">
+                          인재상
+                         </a>
+                       <a class="navbar-item" href="../careers/chaeyong.html">
+                       채용전형
+                      </a>
+                      <a class="navbar-item" href="../careers/insa.html">
+                        인사제도
+                      </a>
+                    </div> 
+                </div>
+                    <div class="navbar-dropdown cate" id="cate04"></div>
+                
+                <div href="../cs/ask.html" class="navbar-item has-dropdown is-hoverable single">
+                    <a class="navbar-link is-arrowless">
+                          CS center
+                    </a>
+                    <div class="navbar-dropdown single">
+                       <a class="navbar-item" href="../cs/ask.html">
+                        문의하기
+                      </a>
+                      <a class="navbar-item" href="../cs/way.html">
+                        오시는 길
+                      </a>
+                    </div> 
+                </div>
+                <div class="navbar-dropdown cate" id="cate05"></div>
+                    
+            </div>
+            
+            <div class="navbar-end" id="tnb">
+              <div class="navbar-item">
+                  
+            
+             <div class="buttons">
+               <a href="../member/join.html" class="button is-danger is-small is-outlined is-rounded">
+                 회원가입
+               </a>
+               <a href="../member/login.html" class="button is-danger is-small is-outlined is-rounded">
+                 로그인
+               </a>
+                 
+             </div>
+            
+          </div>
+        </div>
+          </div>
+        </nav>
+    <script>
+    $(document).ready(function(){
+        $.ajax({
+            url:"/web03/MenuLoadCtrl.html",
+            type:"POST",
+            enctype:"UTF-8",
+            datatype:"json",
+            processData:false,
+            contentType:false, 
+            cache:false,
+            success:function(data){
+                $(".navbar-dropdown.cate").empty();
+                var trans = $.parseJSON(data);
+                $.each(trans, function(key, value){
+                    if(key=="data"){
+                        for(var i=0;i<value.length;i++){
+                            if(value[i].cate=="A"){
+                                $("#cate01").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="B"){
+                                $("#cate02").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="C"){
+                                $("#cate03").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="D"){
+                                $("#cate04").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="E"){
+                                $("#cate05").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="F"){
+                                $("#cate06").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            } else if(value[i].cate=="G"){
+                                $("#cate07").append("<a href='/web03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                            }
+                        }
+                    }
+                });
+                
+            }
+        });
+    });
+    </script>
+    </div>
+</div>
 
 
 <body>
@@ -239,10 +348,9 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
     </footer>
     
 
-
  
-
 
     
 
 </html>
+
