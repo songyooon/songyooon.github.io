@@ -32,15 +32,18 @@
    <script src="./js/respond.min.js"></script>
    <!-- jquery 플러그인 연결 -->
    <script src="./js/jquery-1.11.1.js"></script>
-   <link rel="stylesheet" href="./css/reset2.css">
-   <link rel="stylesheet" href="./css/header.css">
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <link rel="stylesheet" href="../css/reset2.css">
+   <link rel="stylesheet" href="../css/header.css">
+   <link rel="stylesheet" href="../css/footer.css">
    <style>
+
     /* header.css */
 
-    
     a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
-      a:visited { color: #000; text-decoration:none !important}	
-      a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+    a:visited { color: #000; text-decoration:none !important}	
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
 
     .logo {width: 50px; padding-top: 10px; }
     .navbar {padding-top: 25px;}
@@ -54,44 +57,6 @@
     .page { clear:both; width: 100%;}
     .page_wrap {width: 1200px; margin: 0 auto;}
     .page_tit { text-align: center; font-size:32px; padding-top: 1.2em; padding-bottom: 0.8em;}
-    .lst { clear:both; width: 1200px;}
-    .lst:after { content:""; display:block; clear:both; }
-    .lst li { margin-bottom: 40px;}
-    .lst li.left { float:left; width: 816px; height: 459px;}
-    .lst li.right { float:right; width: 350px; height: 459px;}
-    .ico_lst { clear: both; width: 100%; overflow: hidden;}
-    .ico_lst li a { display: block; background-repeat: no-repeat; background-position: 0px center; background-size: auto 80%; padding-left: 80px;}
-    .ico_lst li a.icon1 { background-image: url("./img/icon/1.svg");}
-    .ico_lst li a.icon2 { background-image: url("./img/icon/2.svg");}
-    .ico_lst li a.icon3 { background-image: url("./img/icon/3.svg");}
-    .cate_tit { color: #000; font-size: 20px; padding-bottom: 0.5em;}
-    .cate_com { color:#000; font-size: 14px;}
-    
-    .pic_lst { clear: both; width: 100%; padding-bottom: 80px;}
-    .pic_lst:after { content: ""; display: block; clear: both;}
-    .pic_lst li { float: left; position: relative; margin-bottom: 40px;}
-    .pic_lst li a { display: block; width: 360px; margin-right: 40px; overflow: hidden; height:360px;}
-    .pic_lst li a img {display: block; width:360px; height:auto; }
-    .pic_lst li a:hover img { margin-left: 0; }
-    .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
-    .pic_lst li a:hover .hv_box { opacity:1; }
-    .pic_tit { position:absolute; top:30px; left: 30px; 
-    text-shadow:0px 0px 3px #000; }
-    .pic_com { position:absolute; right:30px; bottom:30px; 
-    background-color: rgba(247, 0, 0, 0.739); color: #000; border-radius:9px;}
-
-    #page3 { background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position:center; height: 100vh; overflow:hidden; }
-    #page3 .page_wrap { width: 100%; }
-    .circle_lst { clear:both; width: 4455px; }
-    .circle_lst li { width: 200px; height: 200px; position:relative; border-radius:120px; overflow:hidden; background-color: #fff;
-    float:left; margin:28px;  }
-    .circle_lst.lst2 li { float:right; }
-    .circle_lst li a { display:block; width: 100%; height: 100%; }
-    .circle_lst li a img { display:block; width:190px; height:auto; 
-    position:absolute; top:50%; left: 7px; z-index:11; margin-top: -90px; }
-
 
     /* footer */
 
@@ -99,8 +64,27 @@
       a:visited { color: #000; text-decoration:none !important}	
       a:active { color: rgb(0, 0, 0); text-decoration:none !important}
 
+      .table { min-width:960px; }
+      #logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro04/resources/icon/lotte.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+      #nav { border-bottom:3px solid #fff; }
+
+    .ft { clear:both; width: 100%; height: 210px; background-color: rgb(0, 0, 0); padding-bottom: 20px; }
+    .ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
+    .ft_wrap:after { content:""; display:block; clear:both; }
+    .ft_logo { float:left; width: 150px; padding-top: 85px;}
+    .fnb { clear:both; }
+    .fnb a { color:rgb(255, 255, 255); font-size:14px; padding: 24px; padding-top: 0; }
+    .fnb a.dpc { color:rgb(255, 255, 255); }
+
+    .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+    background-color:rgba(0, 0, 0, 0.268); color:#fff; display:block; width: 60px;
+    height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
+    .to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
+    .to_top.on { visibility: visible; }
+
     </style>
-    <link rel="stylesheet" href="./css/footer.css">
+
     <script>
     $(document).ready(function(){
         $(".hd").css("position","absolute");
@@ -109,41 +93,10 @@
         $(".circle_lst.lst2").append($lst1_obj);
     });    
     </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<style>
-.table { min-width:960px; }
-#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro04/resources/icon/lotte.jpg");
-background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
-#nav { border-bottom:3px solid #fff; }
 
 
-  /* footer */
 
 
-.ft { clear:both; width: 100%; height: 210px; background-color: rgb(0, 0, 0); padding-bottom: 20px; }
-.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
-.ft_wrap:after { content:""; display:block; clear:both; }
-.ft_logo { float:left; width: 150px; padding-top: 85px;}
-.left { float:left; width: 460px; padding-left: 50px; }
-.right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
-.right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
-.fnb { clear:both; }
-.fnb a { color:rgb(255, 255, 255); font-size:14px; padding: 24px; padding-top: 0; }
-.fnb a.dpc { color:rgb(255, 255, 255); }
-.addr { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 20px; 
-font-size:12px; line-height: 2; }
-.copyright { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 13px; font-size: 13px;}
-
-.to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
-background-color:rgba(0, 0, 0, 0.268); color:#fff; display:block; width: 60px;
-height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:hidden; transition-duration:0.8s; }
-.to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
-.to_top.on { visibility: visible; }
-
-
-</style>
-<link rel="stylesheet" href="./css/footer.css">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
 
 <!-- Hotjar Tracking Code for web04 -->
 <script>
