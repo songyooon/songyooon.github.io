@@ -82,18 +82,18 @@
     .circle_lst li a img { display:block; width:190px; height:auto; 
     position:absolute; top:50%; left: 7px; z-index:11; margin-top: -90px; }
 
-        /* Safari 6.1+ (9.0 is the latest version of Safari at this time) */
 
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
-{ @media {
-    .safari_only { 
+        /* Safari 9 */
 
-        color:#000000; 
-        background-color:#CCCCCC; 
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) 
+{
 
-    }
-}}
+  .safari_only {
+    color:#0000FF; 
+    background-color:#CCCCCC; 
+  }
 
+}
 
     /* footer */
 
