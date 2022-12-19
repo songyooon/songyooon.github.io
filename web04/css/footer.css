@@ -13,6 +13,7 @@
 .fnb { clear:both; }
 .fnb a { color:rgb(255, 255, 255); font-size:14px; padding: 24px; }
 .fnb a.dpc { color:rgb(255, 255, 255); }
+.a {color:#fff;}
 .addr { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 20px; 
 font-size:12px; line-height: 2; }
 .copyright { padding-left: 24px; color:rgb(255, 255, 255); padding-top: 13px; font-size: 13px;}

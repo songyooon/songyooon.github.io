@@ -140,6 +140,54 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
 .to_top:hover { background-color: rgba(255, 255, 255, 0.801); }
 .to_top.on { visibility: visible; }
 
+.table_wrap table {
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.esg_wrap {
+    box-sizing: border-box;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    word-wrap: break-word;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: "NotoKR", "San-Serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mission_p .section {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.esg_wrap {
+    box-sizing: border-box;
+}
+
+
+
 
 </style>
 <link rel="stylesheet" href="./css/footer.css">
@@ -338,36 +386,147 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
     </ul>
   </nav>
 
-      <section class="section">
-        <div class="container">
 
-            <table class="table">
-              <thead>
-                <tr>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="table_wrap center">
+        <table>
+            <caption><strong>ESG 등급(KCGS 평가)</strong><br><br>全 상장사 KCGS(기업지배구조원) ESG 등급 A(우수) 달성<br><br></caption>
+            <colgroup>
+                <col style="width:235px;">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr class="first">
+                    <th scope="col" rowspan="2">그룹사</th>
+                    <th scope="col" colspan="4">2021년</th>
+                    <th scope="col" colspan="4">2020년</th>
                 </tr>
-              </thead>
-               <tbody>
-               
-                <h2>ESG 평가</h2><br>
-
-                <strong>ESG 등급(KCGS 평가)</strong><br><br>
-
-                <p>全 상장사 KCGS(기업지배구조원) ESG 등급 A(우수) 달성(‘21년 10월)<br><br>
-
-                그룹사	2021년	2020년<br>
-                통합	E	S	G	통합	E	S	G<br>
-                지주	A	B+	A+	A	B+	B	A	B<br>
-                케미칼	A	B+	A+	A	B+	B	A	A<br>
-                칠성음료	A	B+	A+	A	B+	B+	A	B+<br>
-                푸드	A	B+	A	A	A	B+	A	B+<br>
-                하이마트	A	A	A+	A	A	B+	A+	A<br>
-                쇼핑	A	A	A+	A	A	A	A+	A<br>
-                정밀화학	A	A	A+	A	A	A	A+	A<br>
-                정보통신	A	A	A	A	A	B+	A	A<br>
-                제과	A	A	A	A	A	A	A+	B+</p>
-                 
-              </tbody>
-            </table>
+                <tr>
+                    <th scope="col">통합</th>
+                    <th scope="col">E</th>
+                    <th scope="col">S</th>
+                    <th scope="col">G</th>
+                    <th scope="col">통합</th>
+                    <th scope="col">E</th>
+                    <th scope="col">S</th>
+                    <th scope="col">G</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">지주</th>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">B+</td>
+                <td>B</td>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <th scope="row">케미칼</th>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">B+</td>
+                <td>B</td>
+                <td>A</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th scope="row">칠성음료</th>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">B+</td>
+                <td>B+</td>
+                <td>A</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <th scope="row">푸드</th>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <th scope="row">하이마트</th>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A+</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th scope="row">쇼핑</th>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th scope="row">정밀화학</th>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th scope="row">정보통신</th>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>B+</td>
+                <td>A</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th scope="row">제과</th>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+                <td class="type2">A</td>
+                <td>A</td>
+                <td>A+</td>
+                <td>B+</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
             
             <div class="buttons">
               <a href="/pro04/about/addEsggrade.html" class="button is-danger is-small is-outlined is-rounded">등록</a>
