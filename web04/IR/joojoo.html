@@ -142,6 +142,41 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
 .to_top.on { visibility: visible; }
 
 
+element.style {
+    display: block;
+}
+
+.cont_table {
+    display: none;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: "NotoKR", "San-Serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+    display: block;
+}
+
+.mission_p .section {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.tit_deco { font-size: 32px; padding-left: 370px; } 
+.tb_tit_cont_wrap { font-size: 23px; padding-left: 408px; }
+.tb_tit { font-size: 23px; padding-left: 408px;}
+.table_desc2 { font-size: 12px; font-style: italic; }
+.table { border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;  }
+.cont_table { padding-left: 200px; }
+
+
 </style>
 <link rel="stylesheet" href="./css/footer.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -342,42 +377,149 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
       <section class="section">
         <div class="container">
 
+
+
+
+
+          <div id="table_04" class="cont_table" style="display: block;">
+            <h3 class="tit_deco"><strong>주주정책</strong></h3><br>
+            <h4 class="tb_tit_cont_wrap"><strong>배당</strong></h4><br>
+            <div class="table_wrap center">
+             <!-- 2022-03-16 테이블변경(s) -->
+                          <p class="unit">(단위:  원)</p><br>
             <table class="table">
+                              <colgroup>
+                                  <col style="width:12%">
+                                  <col style="width:12%">
+                                  <col style="width:17%">
+                                  <col style="width:17%">
+                                  <col style="width:17%">
+                                  <col style="width:17%">
+                              </colgroup>
               <thead>
+                <tr class="first">
+                  <th scope="col" colspan="2">구분</th>
+                                      <th scope="col">FY 2021</th>
+                                      <th scope="col">FY 2020</th>
+                                      <th scope="col">FY 2019</th>
+                                      <th scope="col">FY 2018</th>
+                                  </tr>
+                                  <tr>
+                                      <th scope="col" colspan="2">배당종류</th>
+                                      <th scope="col">현금배당</th>
+                                      <th scope="col">현금배당</th>
+                                      <th scope="col">현금배당</th>
+                                      <th scope="col">현금배당</th>
+                                  </tr>
+              </thead>
+              <tbody>
+                <tr class="first">
+                                      <td rowspan="2">주당배당금</td>
+                                      <td>보통주</td>
+                                      <td>1,500</td>
+                                      <td>1,000</td>
+                                      <td>1,100</td>
+                                      <td>800</td>
+                </tr>
+                                  <tr>
+                                     <td>우선주</td>
+                                     <td>1,550</td>
+                                     <td>1,050</td>
+                                     <td>1,150</td>
+                                     <td>850</td>
+                          </tr>
+                                  <tr>
+                                      <td rowspan="3">배당총액</td>
+                                      <td>보통주</td>
+                                      <td>1,062억</td>
+                                      <td>708억</td>
+                                      <td>779억</td>
+                                      <td>566억</td>
+                                  </tr>
+                                  <tr>
+                                     <td>우선주</td>
+                                     <td>11억</td>
+                                     <td>7억</td>
+                                     <td>8억</td>
+                                     <td>6억</td>
+                                  </tr>
+                                  <tr>
+                                     <td>소계</td>
+                                     <td>1,073억</td>
+                                     <td>715억</td>
+                                     <td>787억</td>
+                                     <td>572억</td>
+                                  </tr>
+                                  <tr>
+                                     <td colspan="2">당기순이익(별도)</td>
+                                     <td>-364억</td>
+                                     <td>-3,071억</td>
+                                     <td>2,108억</td>
+                                     <td>-6,293억</td>
+                                  </tr>
+                                  <tr>
+                                     <td colspan="2">배당성향</td>
+                                     <td>-</td>
+                                     <td>-</td>
+                                     <td>37.3%</td>
+                                     <td>-</td>
+                                  </tr>
+                                  <tr>
+                                     <td rowspan="2" class="td">배당수익률</td>
+                                     <td>보통주</td>
+                                     <td>4.9%</td>
+                                     <td>2.9%</td>
+                                     <td>2.8%</td>
+                                     <td>1.5%</td>
+                                  </tr>
+                                  <tr>
+                                     <td>우선주</td>
+                                     <td>3.3%</td>
+                                     <td>1.6%</td>
+                                     <td>1.8%</td>
+                                     <td>1.6%</td>
+                                  </tr>
+              </tbody>
+                          </table>
+                          <!-- 2022-03-16 테이블변경(e) -->
+                          <br><p class="table_desc2">
+  ※ 배당수익률: 공시기준(주주명부폐쇄일 2명부거래일 전부터 과거 1주일간 유가증권시장에서 형성된 종가평균의 산술평균가격에 대한 주당 배당금의 비율)<br>
+  ※ 2017년 10월 롯데지주 주식회사 신설
+                          </p><br><br><br>
+            </div>
+            <h4 class="tb_tit"><strong>자기주식 소각</strong></h4><br>
+            <div class="table_wrap center">
+            <table class="table">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr class="first">
+                  <th scope="col" rowspan="2">일시</th>
+                  <th scope="col" rowspan="2">자기주식 소각 수량</th>
+                  <th scope="col" colspan="2">발행주식수</th>
+                </tr>
                 <tr>
+                  <th scope="col">소각 전</th>
+                  <th scope="col">소각 후</th>
                 </tr>
               </thead>
-               <tbody>
-               
-                <h2 class="h">주주정책</h2>
-
-                <strong>배당</strong><br><br>
-                
-                <p>(단위: 원)<br><br>
-
-                구분	FY 2021	FY 2020	FY 2019	FY 2018
-                배당종류	현금배당	현금배당	현금배당	현금배당
-                주당배당금	보통주	1,500	1,000	1,100	800
-                우선주	1,550	1,050	1,150	850
-                배당총액	보통주	1,062억	708억	779억	566억
-                우선주	11억	7억	8억	6억
-                소계	1,073억	715억	787억	572억
-                당기순이익(별도)	-364억	-3,071억	2,108억	-6,293억
-                배당성향	-	-	37.3%	-
-                배당수익률	보통주	4.9%	2.9%	2.8%	1.5%
-                우선주	3.3%	1.6%	1.8%	1.6%
-                ※ 배당수익률: 공시기준(주주명부폐쇄일 2명부거래일 전부터 과거 1주일간 유가증권시장에서 형성된 종가평균의 산술평균가격에 대한 주당 배당금의 비율)
-                ※ 2017년 10월 롯데지주 주식회사 신설</p><br>
-
-              <strong>자기주식 소각</strong><br><br>
-               
-            <p>일시	    자기주식 소각 수량	    발행주식수
-                                            소각 전	소각 후
-                19.01.14	11,657,000주
-                (전체 주식수의 10%)	    116,566,237주	104,909,237주</p>
-                 
+              <tbody>
+              <tr class="first">
+                <td>`19.01.14</td>
+                <td>11,657,000주<br>
+                  (전체 주식수의 10%)</td>
+                <td>116,566,237주</td>
+                <td>104,909,237주</td>
+              </tr>
               </tbody>
             </table>
+            </div>
+          </div><br><br>
+
             
             <div class="buttons">
               <a href="/pro04/about/addJoojoo.html" class="button is-danger is-small is-outlined is-rounded">등록</a>
