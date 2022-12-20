@@ -15,7 +15,7 @@
 .gnb li .sub { display:none; }
 .gnb > ul > li { float: left; width: 20%; height: 40px; line-height:40px; text-align: center; position: relative; }
 .gnb li .dp1 { display:block; height:40px; line-height: 40px; background-color: transparent; color:rgb(218, 41, 28); border:1px solid rgb(218, 41, 28); border-left:0px; border-right:0px; text-align: center; font-weight:530;}
-.gnb li:hover .dp1 { background-color: rgb(218, 41, 28); color: rgb(255, 255, 255); border:1px solid transparent; }
+.gnb li:hover .dp1 { background-color: rgb(218, 41, 28); color: rgb(255, 255, 255); border:1px solid transparent;  }
 .gnb .sub { display: none; width:100%; height:auto; position:absolute; top:40px; background-color:transparent; left: 0; z-index:90; height: 124px; }
 .gnb li:hover .sub { display:block; }
 .gnb li .sub li { clear:both; width: 100%; height: 40px; line-height: 40px; border-bottom:1px solid rgb(218, 41, 28); }
