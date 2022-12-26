@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>모바일 웹 앱1</title>
+    
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.page_tit { font-size: 5vw; clear: both; padding-bottom: 2rem; }
+.ui-header .ui-title { text-align: right; }
+</style>
+
+</head>
+
+
+<body class="ui-mobile-viewport ui-overlay-b">
+
+
+    <div id="page0" data-role="page" class="ui-page ui-page-theme-b ui-page-active">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <h1 role="heading" class="ui-title">여기는 헤더</h1>
+            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a">
+                        <a href="#page1" id="alert" data-icon="" data-theme="a" 
+                        class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">정책</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a> 
+                    </li>
+                    <li class="ui-block-a">
+                        <a href="#page2" id="chat" data-icon="comment" data-theme="a" 
+                        class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">소식</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a> 
+                    </li>
+                    <li class="ui-block-a">
+                        <a href="#page3" id="mail" data-icon="mail" data-theme="a" 
+                        class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">정보·법령</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a> 
+                    </li>
+                    <li class="ui-block-a">
+                        <a href="#page4" id="info" data-icon="info" data-theme="a" 
+                        class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">국민참여·민원</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a> 
+                    </li>
+                    <li class="ui-block-a">
+                        <a href="#page5" id="home" data-icon="home" data-theme="a" 
+                        class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">소개</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a> 
+                    </li>
+            </nav>
+            
+        </header>
+        <div data-role="content" class="ui-content">
+            <p>메인 페이지 영역</p>
+            <ul data-role="listview" class="ui-list">
+                <li><a href="#page1" data-transition="fade">페이지1</a></li>
+                <li><a href="#page2" data-transition="pop">페이지2</a></li>
+                <li><a href="#page3" data-transition="flip">페이지3</a></li>
+                <li><a href="#page4" data-transition="turn">페이지4</a></li>
+                <li><a href="#page1" data-transition="flow">페이지1</a></li>
+                <li><a href="#page2" data-transition="slidefade">페이지2</a></li>
+                <li><a href="#page3" data-transition="slide">페이지3</a></li>
+                <li><a href="#page4" data-transition="slideup">페이지4</a></li>
+                <li><a href="#page1" data-transition="slidedown">페이지1</a></li>
+                <li><a href="#page2" data-transition="none">페이지2</a></li>
+            </ul>
+        </div>
+
+
+        <h1 class="ui-title">비순서형 목록</h1>
+        <ul class="listview" data-role="listview">
+            <li class="ui-list-static ui-body-inherit ui-first-child">
+                <span>Acura</span>
+            </li>
+            <li class="ui-li-static ui-body-inherit"><span>Audi</span></li>
+            <li class="ui-li-static ui-body-inherit"><a href="#page2" class="ui-btn  ui-corner-all ui-shadow ui-btn-inline">BMW</a></li>
+            <li class="ui-li-static ui-body-inherit"><span>Cadilac</span></li>
+            <li class="ui-li-static ui-body-inherit ul-last-child"><span>Ferrari</span></li>
+        </ul>
+
+
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터</h3>
+        </footer>
+    </div>
+
+
+    <div id="page1" data-role="page" class="ui-page ui-page-theme-b">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+            ui-btn-icon-left" role="button">Back</a>
+            <h1 role="heading" class="ui-title">Subpage</h1>
+        </header>
+        <div data-role="content" role="sub" class="ui-content">
+            <p>서브 페이지 영역</p>
+            <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지1</a>
+            <a href="#page2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지2</a>
+            <a href="#page3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지3</a>
+        </div>
+
+    <div id="page2" data-role="page" class="ui-page ui-page-theme-b">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+            ui-btn-icon-left" role="button">Back</a>
+            <h1 role="heading" class="ui-title">Subpage</h1>
+        </header>
+        <div data-role="content" role="sub" class="ui-content">
+            <p>서브 페이지 영역</p>
+            <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지1</a>
+            <a href="#page3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지3</a>
+            <a href="#page4" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지4</a>
+        </div>
+
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터</h3>
+        </footer>
+    </div>
+</body>
+</html>
