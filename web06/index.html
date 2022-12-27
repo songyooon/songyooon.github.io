@@ -98,6 +98,8 @@
 
     .file { width: 3vw;}
 
+    .progress { font-size: 0.8rem; }
+    
 
 
     [data-btn][data-size="s"] {
@@ -143,7 +145,7 @@
     text-size-adjust: none;
     word-wrap: break-word;
     word-break: break-all;
-    font-family: s-core-dream,'Noto Sans KR',sans-serif;
+    font-family: 'Noto Sans KR',sans-serif;
     }
 
     *, :after, :before {
@@ -155,7 +157,7 @@
     padding: 0;
     }
 
-    /*
+    
 
     [data-table]>table td {
     height: 3.6em;
@@ -197,7 +199,7 @@ body#sub #root #container>.layout #content {
 }
 body {
     line-height: 1.6;
-    color: #1a1a1a;
+    color: #000000;
 }
 body, html {
     font-size: 10px;
@@ -305,7 +307,7 @@ table {
     line-height: 1.6;
     letter-spacing: -.03em;
     font-size: 1.5em;
-    color: #2F2F2F;
+    color: #000000;
 }
 body#sub #root #container>.layout #content {
     display: table-cell;
@@ -316,7 +318,7 @@ body#sub #root #container>.layout #content {
 }
 body {
     line-height: 1.6;
-    color: #1a1a1a;
+    color: #000000;
 }
 body, html {
     font-size: 10px;
@@ -339,7 +341,7 @@ body, html {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    background-image: url(/img/2021Renewal/common/icon_8_w.svg);
+    background-image: url(/img/icon/icon_8_w.svg);
 }
 [data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
     content: "";
@@ -371,7 +373,7 @@ body, html {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    background-image: url(/img/2021Renewal/common/icon_8_w.svg);
+    background-image: url(/img/icon/icon_8_w.svg);
 }
 [data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
     content: "";
@@ -390,8 +392,26 @@ body, html {
     margin: 0;
     padding: 0;
 }
-*/
 
+[data-btn="2"][data-color="3"] {
+    border-color: #F7DE69;
+    background-color: #F7DE69;
+}
+
+[data-btn="2"][data-color="5"] {
+    border-color: #DB3A1A;
+    background-color: #DB3A1A;
+}
+
+[data-btn="2"] {
+    display: inline-block;
+    height: 4em;
+    padding: 0 1.4em;
+    border: 1px solid #2E62C5;
+    color: #fff!important;
+    background-color: #2E62C5;
+    border-radius: 0.5em;
+}
 
     </style>
 </head>
@@ -841,24 +861,26 @@ body, html {
                         <tr>
                             <th data-priority="2" data-colstart="1" class="ui-table-priority-2 ui-table-cell-visible">번호</th>
                             <th data-colstart="2">대상연도</th>
-                            <th data-priority="3" data-colstart="3" class="ui-table-priority-3 ui-table-cell-hidden">참여구분</th>
+                            <th data-priority="3" data-colstart="3" class="ui-table-priority-3 ui-table-cell-visible">참여구분</th>
                             <th data-priority="1" data-colstart="4" class="ui-table-priority-1">제목</th>
-                            <th data-priority="5" data-colstart="5" class="ui-table-priority-5 ui-table-cell-hidden">담당부서</th>
-                            <th data-priority="5" data-colstart="6" class="ui-table-priority-5 ui-table-cell-hidden">진행상태</th>
-                            <th data-priority="5" data-colstart="7" class="ui-table-priority-5 ui-table-cell-hidden">첨부</th>
+                            <th data-priority="5" data-colstart="5" class="ui-table-priority-5 ui-table-cell-visible">담당부서</th>
+                            <th data-priority="5" data-colstart="6" class="ui-table-priority-5 ui-table-cell-visible">진행상태</th>
+                            <th data-priority="5" data-colstart="7" class="ui-table-priority-5 ui-table-cell-visible">첨부</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">1</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">설문참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right" class="progress"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -867,13 +889,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">2</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
-                            <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">각종행사</td>
+                            <td class="ui-table-priority-1">2022년 청소년 사이버폭력 예방 온라인 포럼 개최</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">학교생활문화과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="3" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_b.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -882,13 +906,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">3</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">학생건강정책과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right" class="progress"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -897,13 +923,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">4</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="5" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -912,13 +940,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">5</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right" class="progress"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -927,13 +957,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">6</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right" class="progress"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -942,13 +974,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">7</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">설문참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="3" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_b.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -957,13 +991,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">8</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="6" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -972,13 +1008,13 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">9</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">공모참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
@@ -987,13 +1023,15 @@ body, html {
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">10</th>
                             <td><a href="#page1?" data-rel="external">2022</a></td>
-                            <td class="ui-table-priority-3 ui-table-cell-hidden">설문참여</td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">설문참여</td>
                             <td class="ui-table-priority-1">2022학년도 2학기 대학 원격교육 만족도 조사 안내(~12/30)</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">대학학사제도과</td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">대학학사제도과</td>
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
+                                <span data-btn="2" data-color="5" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
-                            <td class="ui-table-priority-5 ui-table-cell-hidden">
+                            <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
                                     <img src="./img/icon/btn_file_black.png" alt="첨부" class="file">
                                 </a>
