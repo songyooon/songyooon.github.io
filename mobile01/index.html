@@ -20,17 +20,17 @@
     <meta http-equiv="refresh" content="600">
     <meta http-equiv="Page-Enter" content="revealtrans(Duration=1, Transition=12)">
 
-        <!--ios-->
-        <meta property="al:ios:url" content="ios app url">
-        <meta property="al:ios:app_store_id" content="ios appstore id">
-        <meta property="al:ios:app_name" content="교육부">
-        <!--안드로이드-->
-        <meta property="al:android:url" content="android app url">
-        <meta property="al:android:app_name" content="교욱부">
-        <meta property="al:android:package" content="android package name">
-        <meta property="al:web:url" content="android app url">
+    <!--ios-->
+    <meta property="al:ios:url" content="ios app url">
+    <meta property="al:ios:app_store_id" content="ios appstore id">
+    <meta property="al:ios:app_name" content="교육부">
+    <!--안드로이드-->
+    <meta property="al:android:url" content="android app url">
+    <meta property="al:android:app_name" content="교욱부">
+    <meta property="al:android:package" content="android package name">
+    <meta property="al:web:url" content="android app url">
 
-            <!--오픈그래프-->
+    <!--오픈그래프-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="songyooon.github.io/mobile01/">
     <meta property="og:title" content="교육부">
@@ -96,16 +96,14 @@
 
     .img { width: 90vw;}
 
-    .file { width: 3vw;}
+    .file { width: 5vw; padding-left: 1em;}
 
     .progress { font-size: 0.8rem; }
     
     .mainimg { width: 100%; }
 
-    [data-btn][data-size="s"] {
-    height: 2.4em;
-    padding: 0 1em;
-    }
+    .down { color: rgb(37, 89, 246); border:#2E62C5 solid 1px; border-radius: 1rem;}
+
 
     [data-btn="2"][data-color="4"] {
     border-color: #408D58;
@@ -125,6 +123,26 @@
     background-color: #2E62C5;
     border-radius: 0.5em;
     }
+
+
+[data-btn="2"][data-color="3"] {
+    border-color: #F7DE69;
+    background-color: #F7DE69;
+}
+
+[data-btn="2"][data-color="5"] {
+    border-color: #DB3A1A;
+    background-color: #DB3A1A;
+}
+
+
+    [data-btn][data-size="s"] {
+    height: 2.4em;
+    padding: 0 1em;
+    }
+
+
+
 
     [data-btn] {
     overflow: hidden;
@@ -188,14 +206,14 @@ table {
     line-height: 1.6;
     letter-spacing: -.03em;
     font-size: 1.5em;
-    color: #2F2F2F;
+    color: #000000;
 }
 body#sub #root #container>.layout #content {
     display: table-cell;
     min-height: 600px;
     padding: 3em 4.5em 8em;
     vertical-align: top;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 body {
     line-height: 1.6;
@@ -241,15 +259,7 @@ body, html {
     font-size: 1.5em;
     color: #fff;
 }
-* {
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    text-size-adjust: none;
-    word-wrap: break-word;
-    word-break: break-all;
-    font-family: s-core-dream,'Noto Sans KR',sans-serif;
-}
+
 *, :after, :before {
     box-sizing: border-box;
 }
@@ -261,15 +271,8 @@ body, html {
 [data-align=right] {
     text-align: right!important;
 }
-[data-btn="2"] {
-    display: inline-block;
-    height: 4em;
-    padding: 0 1.4em;
-    border: 1px solid #2E62C5;
-    color: #fff!important;
-    background-color: #2E62C5;
-    border-radius: 0.5em;
-}
+
+
 [data-btn] {
     overflow: hidden;
     font-size: .6666666667em;
@@ -320,6 +323,144 @@ body {
     line-height: 1.6;
     color: #000000;
 }
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+[data-btn][data-size="s"]>span:after {
+    top: 50%;
+}
+[data-btn][data-align=right]>span:after {
+    left: auto;
+    right: 0;
+}
+[data-btn="2"][data-icon=check]>span:after {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(/img/icon/icon_8_w.svg);
+}
+[data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    width: 1.0666em;
+    height: 1.0666em;
+    transform: translateY(-50%);
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+[data-btn][data-size="s"]>span:after {
+    top: 50%;
+}
+
+[data-btn][data-align=right]>span:after {
+    left: auto;
+    right: 0;
+}
+[data-btn="2"][data-icon=check]>span:after {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(/img/icon/icon_8_w.svg);
+}
+[data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    width: 1.0666em;
+    height: 1.0666em;
+    transform: translateY(-50%);
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+body#sub #root #container>.layout #content>.midd * {
+    font-family: 'Noto Sans KR',sans-serif;
+}
+@media screen and (max-width: 900px)
+[data-table][data-type=view]>table {
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0);
+}
+[data-table]>table {
+    width: 100%;
+    font-size: 1.5rem;
+    border-top: 2px solid #000;
+    border-collapse: collapse;
+}
+table {
+    table-layout: fixed;
+    border-spacing: 0;
+}
+* {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: s-core-dream,'Noto Sans KR',sans-serif;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+*, body {
+    font-weight: 400;
+}
+user agent stylesheet
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+#middle #txt {
+    line-height: 1.6;
+    letter-spacing: -.03em;
+    font-size: 1.5em;
+    color: #2F2F2F;
+}
+body#sub #root #container>.layout #content {
+    display: table-cell;
+    min-height: 600px;
+    padding: 3em 4.5em 8em;
+    vertical-align: top;
+    font-size: 1rem;
+}
+body {
+    line-height: 1.6;
+    color: #1a1a1a;
+}
 body, html {
     font-size: 10px;
 }
@@ -330,88 +471,22 @@ body, html {
     margin: 0;
     padding: 0;
 }
-[data-btn][data-size="s"]>span:after {
-    top: 50%;
-}
-[data-btn][data-align=right]>span:after {
-    left: auto;
-    right: 0;
-}
-[data-btn="2"][data-icon=check]>span:after {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(/img/icon/icon_8_w.svg);
-}
-[data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: calc(50% + 1px);
-    width: 1.0666em;
-    height: 1.0666em;
-    transform: translateY(-50%);
-}
 *, :after, :before {
     box-sizing: border-box;
 }
+
 *, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
 
-[data-btn][data-size="s"]>span:after {
-    top: 50%;
-}
 
-[data-btn][data-align=right]>span:after {
-    left: auto;
-    right: 0;
-}
-[data-btn="2"][data-icon=check]>span:after {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(/img/icon/icon_8_w.svg);
-}
-[data-btn="2"][data-icon]>span:after, [data-btn="1"][data-icon]>span:after, [data-btn="3"][data-icon]>span:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: calc(50% + 1px);
-    width: 1.0666em;
-    height: 1.0666em;
-    transform: translateY(-50%);
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-*, :after, :before, body, fieldset, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
 
-[data-btn="2"][data-color="3"] {
-    border-color: #F7DE69;
-    background-color: #F7DE69;
-}
 
-[data-btn="2"][data-color="5"] {
-    border-color: #DB3A1A;
-    background-color: #DB3A1A;
-}
 
-[data-btn="2"] {
-    display: inline-block;
-    height: 4em;
-    padding: 0 1.4em;
-    border: 1px solid #2E62C5;
-    color: #fff!important;
-    background-color: #2E62C5;
-    border-radius: 0.5em;
-}
+
+
+
 
     </style>
 </head>
@@ -510,6 +585,12 @@ body, html {
 
 
 
+
+
+
+
+
+
     <div id="page1" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
             <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back
@@ -536,7 +617,7 @@ body, html {
                         <tbody>
                             <tr>
                                 <th class="ui-table-priority-2 ui-table-cell-visible">1</th>
-                                <td><a href="#page6?id=1" data-rel="external">2022년 유치원 현황(2022.04.1. 기준, 교육통계자료)</a></td>
+                                <td><a href="#page6?notiId=0" data-rel="external" class="btn1">2022년 유치원 현황(2022.04.1. 기준, 교육통계자료)</a></td>
                                 <td class="ui-table-priority-3 ui-table-cell-hidden">최미희</td>
                                 <td class="ui-table-priority-1">2022-10-28</td>
                                 <td class="ui-table-priority-5 ui-table-cell-hidden">74</td>
@@ -545,14 +626,14 @@ body, html {
 
                             <tr>
                                 <th class="ui-table-priority-2 ui-table-cell-visible">2</th>
-                                <td><a href="#page6?id=2" data-rel="external">2022학년도 유아학비 지원계획 안내</a></td>
+                                <td><a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=312&boardSeq=90481&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=0301&opType=N" data-rel="external">2022학년도 유아학비 지원계획 안내</a></td>
                                 <td class="ui-table-priority-3 ui-table-cell-hidden">이강원</td>
                                 <td class="ui-table-priority-1">2022-01-26</td>
                                 <td class="ui-table-priority-5 ui-table-cell-hidden">64</td>
                             </tr>
                             <tr>
                                 <th class="ui-table-priority-2 ui-table-cell-visible">3</th>
-                                <td><a href="#page6?id=3" data-rel="external">2021년 유치원 현황(2022.04.1. 기준, 교육통계자료)</a></td>
+                                <td><a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=312&boardSeq=89289&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=0301&opType=N" data-rel="external">2021년 유치원 현황(2022.04.1. 기준, 교육통계자료)</a></td>
                                 <td class="ui-table-priority-3 ui-table-cell-hidden">심정산</td>
                                 <td class="ui-table-priority-1">2021-10-15</td>
                                 <td class="ui-table-priority-5 ui-table-cell-hidden">87</td>
@@ -608,6 +689,19 @@ body, html {
                             </tr>
                         </tbody>
                     </table>
+
+
+                    <script>
+                        $(document).ready(function(){
+                            $(".btn1").click(function(){
+                                var idx = $(this).parents("tr").index();
+                                $(".info").fadeOut(10);
+                                $(".info").eq(idx).fadeIn();
+                            });
+                        });    
+                        </script>
+
+
                     
                 </div>
             </div>
@@ -652,7 +746,7 @@ body, html {
                     <tbody>
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">1</th>
-                            <td><a href="#page7?id=1" data-rel="external">2022년 수업 개선 및 학사운영 표창 후보 추천자 공개검증(수정)</a></td>
+                            <td><a href="#page7?notiId=1" data-rel="external">2022년 수업 개선 및 학사운영 표창 후보 추천자 공개검증(수정)</a></td>
                             <td class="ui-table-priority-3 ui-table-cell-hidden">유혜선</td>
                             <td class="ui-table-priority-1">2022-10-28</td>
                             <td class="ui-table-priority-5 ui-table-cell-hidden">74</td>
@@ -1018,7 +1112,9 @@ body, html {
                             <td class="ui-table-priority-1"><a href="#page4?id=1" class="text">2022 교과서 아이디어 공모전</a></td>
                             <td class="ui-table-priority-5 ui-table-cell-visible">교과서정책과</td>
                             <td class="ui-table-priority-5 ui-table-cell-visible">
-                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>진행</span></span>
+                                <span data-btn="2" data-color="4" data-size="s" data-icon="check" data-align="right"><span>
+                                    <img src="./img/icon/icon_8_w.svg" alt="첨부" class="file">
+                                </span></span>
                             </td>
                             <td class="ui-table-priority-5 ui-table-cell-visible">
                                 <a href="#page5?">
@@ -1075,5 +1171,116 @@ body, html {
             <strong>팩스번호</strong> 민원 044-203-6093<br>문서접수 044-203-6133<br>사업자등록번호 102-83-00181</h3>
     </footer>
 </div>
+
+
+
+
+                
+
+
+
+
+
+
+
+<div id="page6" data-role="page" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
+        <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">뒤로 가기</a>
+        <h1 class="ui-title" role="heading">유아교육</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h1 role="heading" class="ui-title" style="background-color: #fff;">유아교육</h1>
+ 
+
+        <div id="page6" class="page">
+            <div class="info" notiId="0">
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td>최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td>1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+                </div>
+            <div class="info" notiId="1">상세 내용2</div>
+        
+            <script>
+            $(document).ready(function(){
+                $(".info").css("display", "none");
+            });
+            function abc(str){
+                location.href = "#page6";
+                var data = str.substring(str.lastIndexOf("?")+1,str.length);
+                console.log(data);
+                var notiId = 0;
+                eval(data);
+                $(".info").fadeOut(10);
+                $(".info").eq(notiId).fadeIn();
+            }    
+            </script>
+        </div>    
+
+
+        <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">메인으로</a>
+    </div>
+    <br><br><br>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed" style="font-size: 0.8rem;">
+        <h3>[30119] 세종특별자치시 갈매로 408, <br>14동 정부세종청사 교육부<br>세종특별자치시 어진동 634<br>
+            <strong>일반번호</strong> 정부민원안내 전화 상담실 국번없이 110<br>교육부 민원 전화 상담실 02-6222-6060<br>당직실 044-203-6118<br>
+            <strong>팩스번호</strong> 민원 044-203-6093<br>문서접수 044-203-6133<br>사업자등록번호 102-83-00181</h3>
+    </footer>
+</div>
+
+
 </body>
 </html>
