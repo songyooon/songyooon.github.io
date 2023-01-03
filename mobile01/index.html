@@ -76,6 +76,9 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <style>
 
 
@@ -99,7 +102,7 @@
 
     .p { text-align: center; font-style: bold;}
 
-    .img { width: 55vh; padding-top: 2.5rem;}
+    .img { width: 55vh; padding-top: 2.5rem; }
 
     .file { width: 5vw; padding-left: 1em;}
 
@@ -188,7 +191,7 @@
     padding: 0;
     }
 
-    
+   
 
     [data-table]>table td {
     height: 3.6em;
@@ -215,6 +218,10 @@ table {
     text-indent: initial;
     border-spacing: 2px;
 }
+
+
+
+
 #middle #txt {
     line-height: 1.6;
     letter-spacing: -.03em;
@@ -448,7 +455,7 @@ table {
 *, body {
     font-weight: 400;
 }
-user agent stylesheet
+
 table {
     display: table;
     border-collapse: separate;
@@ -493,6 +500,144 @@ body, html {
     padding: 0;
 }
 
+
+
+
+
+
+
+* { 
+        margin: 0;
+        padding: 0;
+    }
+    ul { 
+        list-style: none;
+    }
+    .btn_lst {
+        margin-left: 2rem;
+        padding-left: 2rem;
+    }
+    .btn_lst li {
+        padding-left: 2tem;
+    }    
+    .kkt-video-player {
+        float: left;
+        padding: 10px;
+        border: 5px solid transparent;
+
+        -moz-border-radius: 5px; /* FF1+ */
+        -ms-border-radius: 5px; /* IE future proofing */
+        -webkit-border-radius: 5px; /* Saf3+, Chrome */
+        border-radius: 5px; /* Opera 10.5, IE 9 */
+
+        background: transparent;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #313131),color-stop(1, #000000)); /* Saf4+, Chrome */
+        background-image: -moz-linear-gradient(top, #ffffff00, #ffffff00); /* FF3.6 */
+        background-image: linear-gradient(#313131, #000000);
+
+        box-shadow: inset 0 15px 35px transparent;
+    }
+    .kkt-video-play {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+        background: url(./img/play.png) no-repeat;
+
+        opacity: 0.7;
+
+        -webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+        -moz-transition: all 0.2s ease-in-out; /* Firefox */
+        -ms-transition: all 0.2s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.2s ease-in-out; /* Opera */
+        transition: all 0.2s ease-in-out;
+    }
+
+    .kkt-paused-button {
+        background: url(./img/pause.png) no-repeat;
+    }
+
+    .kkt-video-play:hover {
+        opacity: 1;
+    }
+    .kkt-video-seek .ui-slider-handle {
+        width: 15px;
+        border: 1px solid transparent;
+        top: -4px;
+
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        -ms-border-radius:10px;
+        border-radius:10px;
+
+        background: #e6e6e6;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+        background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+        background-image: linear-gradient(#e6e6e6, #d5d5d5);
+
+        box-shadow: inset 0 -3px 3px #d5d5d5;
+    }
+
+    .kkt-video-seek .ui-slider-handle.ui-state-hover {
+        background: #fff;
+    }
+
+    .kkt-video-seek, .ui-slider-range {
+        -moz-border-radius:15px;
+        -ms-border-radius:15px;
+        -webkit-border-radius:15px;
+        border-radius:15px;
+        background: #4cbae8;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4cbae8),color-stop(1, #39a2ce));
+        background-image: -moz-linear-gradient(top, #4cbae8, #39a2ce);
+        background-image: linear-gradient(#4cbae8, #39a2ce);
+
+        box-shadow: inset 0 -3px 3px #39a2ce;
+    }
+    .kkt-volume-box {
+        height: 30px;
+
+        -moz-transition: all 0.1s ease-in-out; /* Firefox */
+        -ms-transition: all 0.1s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.2s ease-in-out; /* Opera */
+        -webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+        transition: all 0.1s ease-in-out;
+    }
+
+    .kkt-volume-box:hover {
+        height: 135px;
+        padding-top: 5px;
+    }
+
+    .kkt-volume-slider {
+        visibility: hidden;
+        opacity: 0;
+
+        -moz-transition: all 0.1s ease-in-out; /* Firefox */
+        -ms-transition: all 0.1s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.1s ease-in-out; /* Opera */
+        -webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+        transition: all 0.1s ease-in-out;
+    }
+
+    .kkt-volume-box:hover .kkt-volume-slider {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+    }
+    .vdo { 
+        display:block; 
+        width:100%; 
+        height:auto; 
+        margin:0 auto;
+    }
+    .kkt-video-timer { color:#fff; }
+    .btn_lst ul li span { cursor:pointer; }
+
+    @media screen and (max-width:90vw) {
+        .vdo { width:calc(100vw - 30px); }
+        .kkt-video-player { max-width:90vw; box-sizing:border-box; }
+    }
 
 
 
@@ -559,7 +704,10 @@ body, html {
 
    
                 <br><img src="./img/202212190204497620.png" class="mainimg"><br><br>
-            
+
+
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/XAs-aM39mIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br>
 
 
         <div class="ui-container" data-theme="a">
@@ -757,6 +905,35 @@ body, html {
          <div role="main" class="ui-content" data-role="content">
             <div class="ui-container">
 
+
+
+
+                <div class="player">
+                    <video src="./vid/digital.mp4" class="vdo" id="vdo1"></video>
+                    <div class="btn_lst" id="btn_lst">
+                        <ul>
+                            <li><span data-val="./vid/digital.mp4"></span></li>
+                        </ul>
+                    </div>
+               </div>
+            <script src="custom_video_player.js"></script> 
+            <script>
+            $(document).ready(function(){
+                $('#vdo1').gVideo({"target":"vdo1"});
+                $(".kkt-video-seek").slider();
+                $("#btn_lst li span").click(function(){
+                    $("#vdo1").attr("src", $(this).attr("data-val"));
+                    $("#btn_lst").before($("#vdo1").clone());
+                    $(".kkt-video-player").remove();
+                    $('#vdo1').gVideo({"target":"vdo1"});
+                    $(".kkt-video-seek").slider();
+                });
+            });  
+            </script>
+
+
+
+
                 <div id="table-column-toggle-popup-placeholder" class="ui-screen-hidden"></div><a href="#table-column-toggle-popup" id="table-column-toggle-button" data-rel="popup" data-theme="inherit" class="ui-button ui-shadow ui-corner-all ui-widget ui-button-inherit ui-table-columntoggle-btn ui-mini" role="button" style="display:none">Columns...</a><table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke ui-table ui-table-columntoggle">
                     <thead>
                         <tr>
@@ -770,7 +947,7 @@ body, html {
                     <tbody>
                         <tr>
                             <th class="ui-table-priority-2 ui-table-cell-visible">1</th>
-                            <td><a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=93366&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=020501&opType=N" data-rel="external">2022년 수업 개선 및 학사운영 표창 후보 추천자 공개검증(수정)</a></td>
+                            <td><a href="#page7?notiId=0" data-rel="external">2022년 수업 개선 및 학사운영 표창 후보 추천자 공개검증(수정)</a></td>
                             <td class="ui-table-priority-3 ui-table-cell-hidden">유혜선</td>
                             <td class="ui-table-priority-1">2022-10-28</td>
                             <td class="ui-table-priority-5 ui-table-cell-hidden">74</td>
@@ -1222,9 +1399,10 @@ body, html {
 
 <div id="page6" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
-        <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">뒤로 가기</a>
+        <a href="#page1" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+        ui-btn-icon-left" role="button" style="font-size: 0.9rem; background-color: #fff; padding-bottom: 0.5em; padding-left: 3.2em;">뒤로 가기</a>
         <a href="#page0" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-btn-inline" style="font-size: 0.9rem;">메인으로</a>
-        <h1 class="ui-title" role="heading">정책</h1>
+        <h1 role="heading" class="ui-title" style="background-color: #fff; padding-bottom: 0.5em; padding-top: 0.7em; font-weight: 700; font-size: 1.4rem;">정책</h1>
     </header>
     <div data-role="content" role="sub" class="ui-content">
         <h1 role="heading" class="ui-title" style="background-color: #fff;">유아교육</h1>
@@ -1310,9 +1488,9 @@ body, html {
                                                 <th scope="row">등록일</th>
                                                 <td class="left">2022-10-28</td>
                                                 <th scope="row">등록자</th>
-                                                <td>최미희</td>
+                                                <td class="left">최미희</td>
                                                 <th scope="row">조회수</th>
-                                                <td>1289</td>
+                                                <td class="left">1289</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">첨부파일</th>
@@ -1378,6 +1556,489 @@ body, html {
     </footer>
 </div>
 
+
+<div id="page7" data-role="page" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
+        <a href="#page2" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+        ui-btn-icon-left" role="button" style="font-size: 0.9rem; background-color: #fff; padding-bottom: 0.5em; padding-left: 3.2em;">뒤로 가기</a>
+        <a href="#page0" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-btn-inline" style="font-size: 0.9rem;">메인으로</a>
+        <h1 role="heading" class="ui-title" style="background-color: #fff; padding-bottom: 0.5em; padding-top: 0.7em; font-weight: 700; font-size: 1.4rem;">소식</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h1 role="heading" class="ui-title" style="background-color: #fff;">공지사항</h1>
+ 
+
+        <div id="page7" class="page">
+            <div class="info" notiId="0">
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 수업개선 및 학사운영 표창 후보 추천자 공개검증(수정)</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-12-12</td>
+                                                <th scope="row">등록자</th>
+                                                <td>유혜선</td>
+                                                <th scope="row">조회수</th>
+                                                <td>1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+                </div>
+            <div class="info" notiId="1">
+
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td class="left">최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td class="left">1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        
+            <script>
+            $(document).ready(function(){
+                $(".info").css("display", "none");
+            });
+            function abc(str){
+                location.href = "#page7";
+                var data = str.substring(str.lastIndexOf("?")+1,str.length);
+                console.log(data);
+                var notiId = 0;
+                eval(data);
+                $(".info").fadeOut(10);
+                $(".info").eq(notiId).fadeIn();
+            }    
+            </script>
+        </div>    
+
+
+    </div>
+    <br><br><br>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed" style="font-size: 0.8rem;">
+        <h3>[30119] 세종특별자치시 갈매로 408, 14동 정부세종청사 교육부<br>세종특별자치시 어진동 634<br>
+            교육부 민원 전화 상담실 02-6222-6060
+        </h3>
+    </footer>
+</div>
+
+
+
+<div id="page8" data-role="page" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
+        <a href="#page3" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+        ui-btn-icon-left" role="button" style="font-size: 0.9rem; background-color: #fff; padding-bottom: 0.5em; padding-left: 3.2em;">뒤로 가기</a>
+        <a href="#page0" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-btn-inline" style="font-size: 0.9rem;">메인으로</a>
+        <h1 role="heading" class="ui-title" style="background-color: #fff; padding-bottom: 0.5em; padding-top: 0.7em; font-weight: 700; font-size: 1.4rem;">정책</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h1 role="heading" class="ui-title" style="background-color: #fff;">유아교육</h1>
+ 
+
+        <div id="page8" class="page">
+            <div class="info" notiId="0">
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td>최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td>1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+                </div>
+            <div class="info" notiId="1">
+
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td class="left">최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td class="left">1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        
+            <script>
+            $(document).ready(function(){
+                $(".info").css("display", "none");
+            });
+            function abc(str){
+                location.href = "#page8";
+                var data = str.substring(str.lastIndexOf("?")+1,str.length);
+                console.log(data);
+                var notiId = 0;
+                eval(data);
+                $(".info").fadeOut(10);
+                $(".info").eq(notiId).fadeIn();
+            }    
+            </script>
+        </div>    
+
+
+    </div>
+    <br><br><br>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed" style="font-size: 0.8rem;">
+        <h3>[30119] 세종특별자치시 갈매로 408, 14동 정부세종청사 교육부<br>세종특별자치시 어진동 634<br>
+            교육부 민원 전화 상담실 02-6222-6060
+        </h3>
+    </footer>
+</div>
+
+
+
+
+
+<div id="page9" data-role="page" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a" style="background-color: #fff;">
+        <a href="#page4" data-role="button" class="ui-btn ui-btn-left ui-icon-back
+        ui-btn-icon-left" role="button" style="font-size: 0.9rem; background-color: #fff; padding-bottom: 0.5em; padding-left: 3.2em;">뒤로 가기</a>
+        <a href="#page0" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-btn-inline" style="font-size: 0.9rem;">메인으로</a>
+        <h1 role="heading" class="ui-title" style="background-color: #fff; padding-bottom: 0.5em; padding-top: 0.7em; font-weight: 700; font-size: 1.4rem;">정책</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h1 role="heading" class="ui-title" style="background-color: #fff;">유아교육</h1>
+ 
+
+        <div id="page6" class="page">
+            <div class="info" notiId="0">
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td>최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td>1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+                </div>
+            <div class="info" notiId="1">
+
+
+
+
+                <div class="midd">
+                    <div id="txt">
+                        <section>
+                            <div data-board="midd">
+                                <div data-table="" data-type="view">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">제목</th>
+                                                <td colspan="5" class="left">2022년 유치원 현황(2022.4.1.기준, 교육통계자료) </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일</th>
+                                                <td class="left">2022-10-28</td>
+                                                <th scope="row">등록자</th>
+                                                <td class="left">최미희</td>
+                                                <th scope="row">조회수</th>
+                                                <td class="left">1289</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="5" class="left">
+                                                    <ul style="list-style: none;">
+                                                            <li>
+                                                                2022년 유치원 현황(2022.4.1.기준, 교육통계자료).xlsx
+                                                                <a href="https://www.moe.go.kr/boardCnts/fileDown.do?m=0301&s=moe&fileSeq=29c013c6fb2894d8fd5864b4513bd302" title="다운로드" data-btn="1" data-icon="down" data-size="s" data-align="right"><span class="down">다운로드</span></a>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="left">
+                                                    <div data-content="">
+                                                        ※ 2022년 유치원 현황(2022.4.1.기준, 교육통계자료)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        
+            <script>
+            $(document).ready(function(){
+                $(".info").css("display", "none");
+            });
+            function abc(str){
+                location.href = "#page9";
+                var data = str.substring(str.lastIndexOf("?")+1,str.length);
+                console.log(data);
+                var notiId = 0;
+                eval(data);
+                $(".info").fadeOut(10);
+                $(".info").eq(notiId).fadeIn();
+            }    
+            </script>
+        </div>    
+
+
+    </div>
+    <br><br><br>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed" style="font-size: 0.8rem;">
+        <h3>[30119] 세종특별자치시 갈매로 408, 14동 정부세종청사 교육부<br>세종특별자치시 어진동 634<br>
+            교육부 민원 전화 상담실 02-6222-6060
+        </h3>
+    </footer>
+</div>
 
 
 
