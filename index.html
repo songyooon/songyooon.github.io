@@ -1,113 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <title>Portfolio</title>
-    <style>
-    * { margin:0; padding: 0; }
-    body, html { width: 100%; }
-    ul { list-style: none; }
-    a { text-decoration: none; }
-    .wrap { width: 100%; }
-    .hd { clear:both; width: 100%;  height: 140px; border-bottom:5px solid #333; }
-    .hd_wrap { clear:both; width: 1200px; margin: 0 auto; }
-    .logo { display:block; width: 120px; height:50px; background-color: #333; float:left; margin-top: 20px; color:#fff; text-align: center; line-height: 50px; }
-    .tnb { float:right; }
-    .tnb li { float:left; padding:12px; }
-    .gnb { clear:both; width: 100%; }
-    .gnb li { float:left; }
-    .gnb li a { display:block; height: 48px; line-height: 48px; padding: 12px; }
 
-    .content { clear:both; width: 100%; }
-    .visual { clear:both; width: 100%; }
-    .visual img { display:block; width: 100%; height:auto; }
-    .conwrap { width: 100%; min-height:500px; }
+    <!--메타태그-->
+
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="application-name" content="Portfolio">
+    <meta name="subject" content="Portfolio">
+    <meta name="keywords" content="Portfolio"> <!--키워드 수정-->
+    <meta name="description" content="Portfolio"> <!--설명 수정-->
+    <meta name="url" content="songyooon.github.io">    
+    <meta name="author" content="nsy">
+    <meta name="email" content="songyoonnam@gmail.com">
+    <meta name="robots" content="index, flow">
+    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1, Transition=12)">
+
+    <!--ios-->
+
+    <meta property="al:ios:url" content="ios app url"> <!--이하 수정-->
+    <meta property="al:ios:app_store_id" content="ios appstore id">
+    <meta property="al:ios:app_name" content="Portfolio">
+
+    <!--안드로이드-->
+
+    <meta property="al:android:url" content="android app url">
+    <meta property="al:android:app_name" content="Portfolio">
+    <meta property="al:android:package" content="android package name">
+    <meta property="al:web:url" content="android app url">
+
+    <!--오픈그래프-->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="songyooon.github.io/mobile01/">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:image" content="siteimage.jpg"> <!--이미지 수정-->
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="video">
+    <meta name="twitter:title" content="Portfolio">
+    <meta name="twitter:description" content="Portfolio">
+    <meta name="twitter:image" content="logo.png"> <!--이미지 수정-->
+    
+    <link rel="shortcut icon" href="/img/favicon.ico"> <!--이하 파비콘 전부 수정-->
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.ico">
+    <link rel="apple-touch-startup-image" href="/img/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" href="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.ico">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--jQuery 연결-->
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
-            /* footer */
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/footer.css">
 
-    .ft { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
-    .ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
-    .ft_wrap:after { content:""; display:block; clear:both; }
-    .left { float:left; width: 460px; padding-left: 50px; }
-    .fnb { clear:both; }
-    .fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
-    .fnb a.dpc { color:rgb(0, 0, 0); }
-    .addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; font-size:12px; line-height: 2; }
-    .copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px;}
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Cormorant:ital,wght@0,300;1,300;1,400;1,500;1,700&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100&family=Poiret+One&family=Rubik+Bubbles&family=Rubik+Puddles&family=Unna:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+
+
+   <style> /* 반응형 단위로 수정하기 */
+
+    /* font 
+    font-family: 'Cormorant', serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Rubik Bubbles', cursive;
+    font-family: 'Rubik Puddles', cursive;
+    font-family: 'Unna', serif;
+    */
+
+    /* common */
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    /* body */
+    .content { clear:both; width: 100%;}
+    .page { clear:both; width: 100%;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    .profile { float: left; width:15vw; margin-top: 27vh; }
+    .intro { width:18vw; margin-top: 38vh; padding-left: 2vw; padding-bottom: 17vh;}
+    .block {font-family: 'Rubik Bubbles', cursive; font-size: 1.1em; color:rgb(255, 255, 255); border:0.1em solid #000; border-radius: 3em; background-color: #000; padding: 0.6em;}
+    .left { padding-left: 5vw; }
+    .right { padding-top: 40vh; padding-bottom: 15vh;}
+    .part { padding-top: 80vh; font-family: 'Rubik Bubbles', cursive; font-size: 1.3em;}
+    .skill { padding-top: 80vh; font-family: 'Noto Sans KR', sans-serif; font-size: 0.8em;}
+    .leftbox {float:left; }
+    .rightbox {float: right; }
+    .btn { font-size:12px; color:rgb(0, 0, 0); border:0.1em solid #000; border-radius: 2em; background-color: transparent; padding: 0.8em;  }
+    .btn:hover {color:rgb(255, 255, 255); }
+
+    .btn {
+    flex: 1 1 auto;
+    margin: 1em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    font-size: 0.7em;
+    color: white;
+    border: 0em solid transparent;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 3em;
+    font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .btn:hover { background-position: right center;}
+
+    .btn-1 { background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);}
+
 
 
     </style>
+        <script>
+            $(document).ready(function(){
+                $(".to_top").attr("href", location.href);
+                $(window).scroll(function(){
+                    var ht = $(window).height();
+                    var tp = $(this).scrollTop();
+                    if(tp>=300){
+                        $(".to_top").addClass("on");
+                        $(".to_top").attr("href", location.href);
+                    } else {
+                        $(".to_top").removeClass("on");
+                        $(".to_top").attr("href", location.href);
+                    }
+                });
+            });    
+            </script>
 </head>
+
+<div class="wrap">
+ <header class="hd">
+    <div class="hd_wrap">
+        <a href="index.html" class="logo"><img src="./img/home.png" width="5" alt="로고"></a>
+        <nav class="tnb">
+            <a href="./login.html">LOGIN</a>
+        </nav>
+        
+        <nav class="gnb">
+            <ul>
+                <li class="item1">
+                    <a href="index.html" class="dp1">About Me</a>
+                </li>
+                <li class="item2">
+                    <a href="./lowclassic.html" class="dp1">Portfolio</a>
+                    <ul class="sub">
+                        <li><a href="./lowclassic.html">01 Low Classic</a></li>
+                        <li><a href="./lotte.html">02 Lotte Group</a></li>
+                        <li><a href="./edu.html">03 Education Ministry</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</div>
+
 <body>
-    <div class="wrap">
-        <header class="hd">
-            <div class="hd_wrap">
-                <a href="" class="logo">SONGYOON</a>
-                <nav class="tnb">
-                    <ul>
-                        <li><a href="">상단1</a></li>
-                        <li><a href="">상단2</a></li>
-                        <li><a href="">상단3</a></li>
-                    </ul>
-                </nav>
-                <nav class="gnb">
-                    <ul>
-                        <li><a href="https://songyooon.github.io/web05/">Project 1</a></li>
-                        <li><a href="https://songyooon.github.io/web04/">Project 2</a></li>
-                        <li><a href="https://songyooon.github.io/web02/">Project 3</a></li>
-                        <li><a href="#page1">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="content">
-            <figure class="visual">
-                <img src="https://placeimg.com/960/280/any/grayscale" alt="비주얼 배너">
-            </figure>
-            <section class="conwrap">
-                <h2 class="con_tit">페이지 제목</h2>
-                <article class="art1">
-                    <img src="" alt="">
-                    <div class="para">
-                        <h3 class="cate_tit">내용의 제목</h3>
-                        <p>내용 본문 텍스트</p>
-                    </div>
-                </article>
-            </section>
-        </div>
 
-        <footer class="ft">
-            <div class="ft_wrap">
-                <div class="left">
-                   <p class="copyright"><br></p>
-                    <p class="addr">
-                       EMAIL SONGYOONNAM@GMAIL.COM<br>
-                    </p>
-                    <p class="copyright">© SONGYOON.</p>
-                </div>
-       
-                <script>
-                function sel_link(sel){
-                    location.href = sel.value;
-                }
-                </script>
-            </div>
-        </footer>
+<!--    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>      -->
 
+<div class="content">
+    <section class="page" id="page1">
+        <div class="page_wrap"> 
 
+ <img src="./img/profile.JPEG" class="profile" alt="profile"><img src="./img/intro3.PNG" class="intro" alt="profile">
 
+<div class="left">
+ <span class="block">What I Can Do</span>
+</div>
+<br><br><br>
+ <!--설명 수정하기-->
 
+ <section class="leftbox">
+    <br><br>
+    <span class="part"><strong>Frontend</strong><br><br><br></span>
+   <span class="skill"><strong>HTML</strong>&nbsp;&nbsp;&nbsp;DOM, Form, Table, Visual Studio Code</span><!-- &nbsp;<a href="https://github.com/songyooon/html" target="_blank" class="btn btn-1">See more</a> --> <br><br><br>
+   <span class="skill"><strong>CSS</strong>&nbsp;&nbsp;&nbsp;CSS Selector, Attribute, Bootstrap, Bulma, Foundation<br> CSS Responsive Framework</span><!-- &nbsp;<a href="https://github.com/songyooon/css" target="_blank" class="btn btn-1">See more</a> --><br><br><br>
+    <span class="skill"><strong>Javascript</strong>&nbsp;&nbsp;&nbsp;ECMA Script Calculator, Digital Clock, Web Application 개발, <br>Data Binding</span><!-- &nbsp;<a href="https://github.com/songyooon/javascript" target="_blank" class="btn btn-1">See more</a> --><br><br><br>
+    <span class="skill"><strong>JQuery</strong>&nbsp;&nbsp;&nbsp;DOM, 이벤트 처리, AJAX, Plugin, Media Player</span>&nbsp;<a href="https://github.com/songyooon/jquery" target="_blank" class="btn btn-1">See more</a><br><br><br>
+    <span class="skill"><strong>Storyboard</strong></span><br><br><br> 
+    <span class="skill"><strong>Prototype</strong>&nbsp;&nbsp;&nbsp;Kakao Oven</span><br><br><br>
+    <span class="skill"><strong>UI/UX</strong></span><br><br><br> 
+     <span class="skill"><strong>Web Standard</strong>&nbsp;&nbsp;&nbsp;W3C</span><br><br><br>
+     <span class="skill"><strong>Cross Media</strong></span><br><br><br>
+     <span class="skill"><strong>Cross Browsing</strong></span><br><br><br>
+     <span class="skill"><strong>Use Behavior</strong>&nbsp;&nbsp;&nbsp;Selenium IDE</span><br><br><br>
 
+   </section>
 
-    </div>
+ <section class="rightbox">
+    <br><br>
+ <span class="part"><strong>Backend</strong><br><br><br></span>
+ <span class="skill"><strong>JAVA</strong>&nbsp;&nbsp;&nbsp;Variable, Operator, 조건문 및 반복문 등을 활용한 구조적 프로그래밍,<br>Class, Interface, Inheritance, Abstraction, API, Generic, Lambda Expressions,<br>Collection Framework, Eclipse Luna</span><!-- &nbsp;<a href="https://github.com/songyooon/java1" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Python</strong>&nbsp;&nbsp;&nbsp;Pycharm</span><!-- &nbsp;<a href="https://github.com/songyooon/python" target="_blank" class="btn btn-4">See more</a> --><br><br>
+ <span class="skill"><strong>C</strong>&nbsp;&nbsp;&nbsp;DevC++</span><!-- &nbsp;<a href="https://github.com/songyooon/c" target="_blank" class="btn btn-4">See more</a> --><br><br>
+ <span class="skill"><strong>JSP</strong>&nbsp;&nbsp;&nbsp;Expressions, Scriptlet, Declaration, Directive, EL, JSTL, Controller, Model,<br>View, JDBC</span><!-- &nbsp;<a href="https://github.com/songyooon/pro03" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>MVC Pattern</strong>&nbsp;&nbsp;&nbsp;MVC 1, 2, Kakao developers 지도 API 활용, Eclipse luna</span><!-- &nbsp;<a href="#" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Spring Legacy</strong>&nbsp;&nbsp;&nbsp;개발자 환경 설정, Dependancy Management, Log Analyzing, DI, IoC, <br>Servlet, xml, AJAX, AOP, Validation, Encryption, File Upload, Interceptor, Paging, <br>ckeditor, 
+    Transaction, 주소 API, E-mail Sending, Chart, Web Application 개발, STS3</span><!-- &nbsp;<a href="https://github.com/songyooon/pro04" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Spring Boot</strong>&nbsp;&nbsp;&nbsp;Maven, Gradle build, Dependancy Management, Package Management,<br>Spring Security, JPA, Mybatis, NoSQL, File Upload, E-mail Sending, Transaction, <br>회원관리, 
+    SHA256/AES256 Encryption, Thymleaf Template, 접속 로그 등을 활용한 <br>Web Application 개발, STS4, IntelliJ</span><!-- &nbsp;<a href="https://github.com/songyooon/pro6" target="_blank" class="btn btn-4">See more</a> --><br><br>
+ <span class="skill"><strong>Database</strong>&nbsp;&nbsp;&nbsp;PL/SQL, CRUD, Oracle, MySQL, MariaDB, PostgreSQL, SQL Lite<br>SQL Developer, MySQL Workbench, HeidiSQL, pgAdmin</span>&nbsp;<a href="https://github.com/songyooon/sql" target="_blank" class="btn btn-1">See more</a><br><br>
+ <span class="skill"><strong>PWA</strong>&nbsp;&nbsp;&nbsp;Node.js, Angular, Vue, React</span><!-- &nbsp;<a href="https://github.com/songyooon/vue" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Responsive Web</strong>&nbsp;&nbsp;&nbsp;JQueryMobile</span><!-- &nbsp;<a href="https://github.com/songyooon/jquerymobile" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Mobile Application</strong>&nbsp;&nbsp;&nbsp;Android Studio</span><!-- &nbsp;<a href="https://github.com/songyooon/android" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>Server</strong>&nbsp;&nbsp;&nbsp;Apache tomcat, FTP, Virtual Server VirtualBox</span><br><br>
+ <span class="skill"><strong>Network</strong>&nbsp;&nbsp;&nbsp;Wireshark, Cisco Packet Tracer</span><br><br>
+ <span class="skill"><strong>Linux</strong>&nbsp;&nbsp;&nbsp;Ubuntu</span><br><br>
+ <span class="skill"><strong>Git</strong>&nbsp;&nbsp;&nbsp;Github</span><!-- &nbsp;<a href="https://github.com/songyooon?tab=repositories" target="_blank" class="btn btn-1">See more</a> --><br><br>
+ <span class="skill"><strong>개발환경</strong>&nbsp;&nbsp;&nbsp;Window, Mac OS</span><br><br>
+</section>
 
-
-
-
-
-    </div>
+         </div>
+     </section>
+ </div>
 </body>
+
+<footer class="ft">
+    <div class="ft_wrap">
+        <div class="leftft"> 
+            <p class="contact"><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=songyoonnam@gmail.com" target="_blank"><img src="./img/mail.png" alt="mail" class="mail">&nbsp;&nbsp;<i>contact</i>&nbsp;&nbsp;songyoonnam@gmail.com</a></p>
+            <p class="contact"><a href="https://github.com/songyooon?tab=repositories" target="_blank"><img src="./img/git3.png" alt="git" class="git">&nbsp;&nbsp;<i>github</i>&nbsp;&nbsp;https://github.com/songyooon</a></p>
+            <p class="copyright">© SONGYOON.</p>
+        </div>
+    </div>
+</footer>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
 </html>

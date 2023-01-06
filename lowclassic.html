@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Portfolio</title>
+
+    <!--메타태그-->
+
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="application-name" content="Portfolio">
+    <meta name="subject" content="Portfolio">
+    <meta name="keywords" content="Portfolio"> <!--키워드 수정-->
+    <meta name="description" content="Portfolio"> <!--설명 수정-->
+    <meta name="url" content="songyooon.github.io">    
+    <meta name="author" content="nsy">
+    <meta name="email" content="songyoonnam@gmail.com">
+    <meta name="robots" content="index, flow">
+    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1, Transition=12)">
+
+    <!--ios-->
+
+    <meta property="al:ios:url" content="ios app url"> <!--이하 수정-->
+    <meta property="al:ios:app_store_id" content="ios appstore id">
+    <meta property="al:ios:app_name" content="Portfolio">
+
+    <!--안드로이드-->
+
+    <meta property="al:android:url" content="android app url">
+    <meta property="al:android:app_name" content="Portfolio">
+    <meta property="al:android:package" content="android package name">
+    <meta property="al:web:url" content="android app url">
+
+    <!--오픈그래프-->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="songyooon.github.io/mobile01/">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:image" content="siteimage.jpg"> <!--이미지 수정-->
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="video">
+    <meta name="twitter:title" content="Portfolio">
+    <meta name="twitter:description" content="Portfolio">
+    <meta name="twitter:image" content="logo.png"> <!--이미지 수정-->
+    
+    <link rel="shortcut icon" href="favicon.ico"> <!--이하 파비콘 전부 수정-->
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <link rel="apple-touch-startup-image" href="/img/favicon/startup.png">
+    <meta name="apple-mobile-web-app-capable" href="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--jQuery 연결-->
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+   <link rel="stylesheet" href="./css/reset2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/footer.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Cormorant:ital,wght@0,300;1,300;1,400;1,500;1,700&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100&family=Poiret+One&family=Rubik+Bubbles&family=Rubik+Puddles&family=Unna:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+
+   <style>
+
+    /* common */
+
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+
+    /* body */
+
+    .content { clear:both; width: 100%;}
+    .page { clear:both; width: 100%;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    .main { display:block; width:100%; margin-top: 30vh; }
+    .main2 { display:block; width:100%; margin-top: 5vh; }
+    .block {font-family: 'Noto Sans KR', sans-serif; font-size: 0.8em; color:rgb(255, 255, 255); border:0.1em solid #000; border-radius: 3em; background-color: #000; padding: 0.8em; }
+    .block2 { font-family: 'Noto Sans KR', sans-serif; font-size: 0.8em; color:rgb(0, 0, 0); border:0.1em solid #000; border-radius: 2em; background-color: transparent; padding: 0.6em; }
+    .block2:hover {color:rgb(255, 255, 255); border:0.1em solid #000; border-radius: 2em; background-color: transparent; padding: 0.6em; }
+    .right { padding-top: 40vh; font-family: 'Noto Sans KR', sans-serif; font-size: 0.8em;}
+    .skill { padding-top: 80vh; font-family: 'Noto Sans KR', sans-serif; font-size: 0.8em;}
+    .btn { font-size:1em; color:rgb(0, 0, 0); border:0.1em solid #000; border-radius: 2em; background-color: transparent; padding: 0.8em;  }
+    .btn:hover {color:rgb(255, 255, 255); }
+    .qr { width: 7vw; }
+
+    </style>
+        <script>
+            $(document).ready(function(){
+                $(".to_top").attr("href", location.href);
+                $(window).scroll(function(){
+                    var ht = $(window).height();
+                    var tp = $(this).scrollTop();
+                    if(tp>=300){
+                        $(".to_top").addClass("on");
+                        $(".to_top").attr("href", location.href);
+                    } else {
+                        $(".to_top").removeClass("on");
+                        $(".to_top").attr("href", location.href);
+                    }
+                });
+            });    
+            </script>
+</head>
+
+<div class="wrap">
+ <header class="hd">
+    <div class="hd_wrap">
+        <a href="./index.html" class="logo"><img src="./img/home.png" width="5" alt="로고"></a>
+        <nav class="tnb">
+            <a href="./login.html">LOGIN</a>
+        </nav>
+        
+        <nav class="gnb">
+            <ul>
+                <li class="item1">
+                    <a href="lowclassic.html" class="dp1">About Low Classic</a>
+                </li>
+                <li class="item2">
+                    <a href="https://songyooon.github.io/web05/" target="_blank" class="dp1">Frontend</a>
+                </li>
+                <li class="item3">
+                    <a href="https://github.com/songyooon/pro05" target="_blank" class="dp1">Backend</a>
+                </li>
+                <li class="item4">
+                    <a href="./lowclassic.html" class="dp1">Portfolio</a>
+                    <ul class="sub">
+                        <li><a href="./lowclassic.html">01 Low Classic</a></li>
+                        <li><a href="./lotte.html">02 Lotte Group</a></li>
+                        <li><a href="./edu.html">03 Education Ministry</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</div>
+
+<body>
+
+    <!--    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>      -->
+
+<div class="content">
+    <section class="page" id="page1">
+        <div class="page_wrap"> 
+
+            <img src="./img/lowclassic1.PNG" class="main" alt="main">
+            <img src="./img/lowclassic2.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic3.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic4.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic5.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic6_1.png" class="main2" alt="main">
+            <img src="./img/lowclassic7.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic8.PNG" class="main2" alt="main">
+            <img src="./img/lowclassic9.PNG" class="main2" alt="main">
+
+            <span class="right"><strong>TYPE</strong>&nbsp;&nbsp;&nbsp;Shopping Mall</span><br><br>
+            <span class="right"><strong>NAME</strong>&nbsp;&nbsp;&nbsp;Low Classic</span><br><br><br>
+
+            <span class="block">How I developed</span><br><br><br> 
+            <span class="skill"><strong>Spring Boot</strong></span><br><br>
+            <span class="skill"><strong>DB</strong>&nbsp;&nbsp;&nbsp;MySQL</span><br><br>
+            <span class="skill"><strong>CSS</strong>&nbsp;&nbsp;&nbsp;Bulma</span><br><br>
+
+            <span class="skill"><strong>Prototype</strong>&nbsp;&nbsp;&nbsp;Kakao Oven</span><br><br>
+            <a href="https://ovenapp.io/view/Fwrshl2CgdC9T1wt5Xj0xsUU7jeNAQVV/wkwr7" target="_blank"><img src="./img/lowclassicqr.PNG" class="qr" alt="QR code"></a>
+            
+            
+
+ <br><br>
+         </div>
+     </section>
+
+ </div>
+</body>
+
+
+<footer class="ft">
+    <div class="ft_wrap">
+        <div class="leftft"> 
+            <p class="contact"><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=songyoonnam@gmail.com" target="_blank"><img src="./img/mail.png" alt="mail" class="mail">&nbsp;&nbsp;<i>contact</i>&nbsp;&nbsp;songyoonnam@gmail.com</a></p>
+            <p class="contact"><a href="https://github.com/songyooon?tab=repositories" target="_blank"><img src="./img/git3.png" alt="git" class="git">&nbsp;&nbsp;<i>github</i>&nbsp;&nbsp;https://github.com/songyooon</a></p>
+            <p class="copyright">© SONGYOON.</p>
+        </div>
+    </div>
+</footer>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+</html>
