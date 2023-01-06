@@ -112,6 +112,11 @@
     a:visited { color: rgb(0, 0, 0); text-decoration:none !important}	
     a:active { color: rgb(0, 0, 0); text-decoration:none !important}
 
+    /* scrollbar none - Chrome, Safari, Opera */
+    ::-webkit-scrollbar { display: none; }
+    body, html { -ms-overflow-style:none; /* IE and Edge */
+                 scrollbar-width:none; }  /* Firefox */ 
+
     /* body */
     .content { clear:both; width: 100%;}
     .page { clear:both; width: 100%;}
